@@ -1,0 +1,5 @@
+soofw/*.pyc
+soofw/static/*.css
+soofw/content/links.md
+drafts
+tmp
