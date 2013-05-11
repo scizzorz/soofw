@@ -1,0 +1,7 @@
+{% extends "section-single.html" %}
+{% block section_title %}
+	source: {{ article.basename[:-3] }}
+{% endblock %}
+{% block section_content %}
+	<pre style="padding: 12px 0; margin: 0; border: none"><code>{{ article.render().decode('utf-8')|safe }}</code></pre>
+{% endblock %}

@@ -1,0 +1,29 @@
+<section>
+	<h1>
+		{% block section_title -%}
+			{% if 'link' in article -%}
+				<a href="{{ article.link }}">{{ article.title }}</a>
+			{%- else -%}
+				{{ article.title }}
+			{%- endif %}
+		{%- endblock %}
+	</h1>
+	{% block section_meta -%}
+		{% if 'tags' in article %}
+		<span class="tags">posted {{article|date_prep}} <a href="{{ url_for('view_single', post_path=article.path, post_name=article.basename[:-3]) }}">{{ article|date }}</a> about
+				{% for tag in article.tags %}
+					{% if loop.last and loop.length > 1 %} and {% endif %}
+					<a href="{{ url_for('view_list', post_path=article.path, tag=tag) }}">{{ tag }}</a>
+					{%- if not loop.last and loop.length > 2 %}, {% endif %}
+				{% endfor %}
+			</span>
+		{% endif %}
+	{%- endblock %}
+	<hr/>
+	{% block section_content -%}
+		{{ article.render()|safe }}
+		{% if article.add_continue -%}
+		<p><a href="{{ url_for('view_single', post_path=article.path, post_name=article.basename[:-3]) }}">Continue...</a></p>
+		{%- endif %}
+	{%- endblock %}
+</section>

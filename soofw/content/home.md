@@ -1,0 +1,13 @@
+* page_title = home
+* title = Welcome!
+* navkey = home
+
+Welcome to the wonderful world of soofw. My name is John (aka scizzorz). I'm 20 years old and studying computer science at [Binghamton University](http://binghamton.edu/) in New York, USA. You can email me at <jweachock@gmail.com>.
+
+I like to tinker with [stuff](http://soofw.com/demos) and make [things](http://soofw.com/projects). Occasionally I have some [thoughts](http://soofw.com/thoughts/) that I write about, but I'm pretty bad at consistently doing that. I also have a dinky little [snippets](http://soofw.com/snippets/) page that has some small pieces of code I forget a lot.
+
+---
+
+I'm a fan of [Android](http://www.android.com/) and [Linux](http://www.linux.org/). I have a [Samsung Galaxy Nexus](http://www.samsung.com/us/mobile/cell-phones/SPH-L700ZKASPR) and a [Google Nexus 7](http://www.google.com/nexus/7/), both running [CyanogenMod](http://www.cyanogenmod.org/) 10.1 nightlies. My desktop is running [Ubuntu](http://www.ubuntu.com/) 12.10 with [LXDE](http://lxde.org/) / [Openbox](http://openbox.org/) with two monitors and a [mechanical keyboard](http://www.razerzone.com/store/razer-blackwidow-ultimate), because mechanical keyboards are *awesome*. My desk is homemade and has a whiteboard embedded in the surface. I also have a [Chromebook](http://www.google.com/intl/en/chrome/devices/landing.html) that I use when I'm out and about, and a [Raspberry Pi](http://www.raspberrypi.org/) for fun. I'm using GoDaddy's VPS hosting for most of my work (oh god the shame), but I'm slowly starting to transition over to the wonderful [Linode](http://www.linode.com/) services.
+
+I use `gnome-terminal` on my desktop and [Secure Shell](https://chrome.google.com/webstore/detail/secure-shell/pnhechapfaindjhompbnflcldabbghjo?hl=en) on my Chromebook, both with a custom color scheme. I use `bash` as my shell and [`tmux`](http://tmux.sourceforge.net/) to make it useful. For editing text of any sort, I use [`vim`](http://www.vim.org/). These days, I prefer to use [Git](http://git-scm.com/) for version control, but I used [Subversion](http://subversion.apache.org/) for a while before learning about Git. Likewise, I'm in the process of learning all sorts of [Python](http://www.python.org/) things, but I used [PHP](http://www.php.net/) for a lot of my stuff because it was super easy for a 14-year-old to pick up and learn. I've tinkered with [Android app development](http://developer.android.com/index.html), [Arduino](http://www.arduino.cc/), woodworking (yes, with real wood!), etc., but a lot of my free time goes into web programming and scripting neat toys. I'm trying to make a lot of my code open source, so check out my [GitHub page](http://github.com/scizzorz/).

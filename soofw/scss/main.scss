@@ -1,0 +1,443 @@
+// oh my god single line comments
+@import "soofw/scss/_include.scss";
+
+html, body {
+	font-family: Arial, sans-serif;
+	font-size: $fontsize;
+	padding: 0;
+	margin: 0;
+}
+html {
+	position: relative;
+	background-color: $background;
+	padding-bottom: 1%;
+	min-height: 96%;
+}
+
+
+// images with a transition inside
+a .transition {
+	@include transition(opacity 0.2s);
+}
+a .hover {
+	opacity: 0;
+}
+a:hover .hover {
+	opacity: 1;
+}
+
+hr {
+	margin: 0.3em 0;
+	border: none;
+	border-bottom: 1px dotted $borders;
+}
+
+// each post is contained in a section
+section {
+	margin: 2em 0;
+	padding: 1em 1em 1px 1em; // stupid paragraph margins at the bottom of the section ruin the padding
+	border-radius: 0.3em;
+	border: 1px solid lighten($background, 7.5%);
+	background: lighten($background, 2.5%);
+	line-height: 1.5em;
+
+	// headers
+	h1, h2, h3 {
+		padding: 0;
+		margin: 0;
+		letter-spacing: 0.1em;
+		.sub {
+			font-size: $fontsize;
+			letter-spacing: 0;
+			font-weight: normal;
+		}
+	}
+	h1 {
+		font-size: 1.3em;
+		text-transform: uppercase;
+		a {
+			color: $accent;
+			text-decoration: none;
+			@include color-transition;
+		}
+		a:hover {
+			color: $hover;
+		}
+		a:after {
+			content: " »";
+			font-size: 1.3em;
+			line-height: 1.3em;
+			text-decoration: none;
+		}
+	}
+	h2 {
+		font-size: 1.2em;
+		padding: 0 0 0.3em 0;
+		border-bottom: 1px dotted $borders;
+		margin: 2em 0 0.3em 0;
+		text-transform: uppercase;
+	}
+	h3 {
+		font-size: 1.1em;
+		margin: 1em 0 0 0;
+		text-transform: none;
+		display: inline-block;
+	}
+
+	.tags {
+		color: $subtle;
+		font-size: 1em;
+		text-transform: lowercase;
+		display: block;
+		a {
+			color: $subtle;
+			@include color-transition;
+
+			&:hover {
+				color: $saccent;
+			}
+		}
+	}
+
+	& > p {
+		text-align: justify;
+		margin: 1em 0;
+		padding: 0 1em;
+	}
+
+	iframe, img {
+		margin: 1em auto;
+		padding: 0.3em;
+		display: block;
+		max-width: 40em;
+		border: 1px dotted $borders;
+	}
+
+	blockquote, pre {
+		display: block;
+		margin: 1em;
+		border-width: 1px 1px 1px 0.3em;
+		border-style: dotted dotted dotted solid;
+		border-color: $borders;
+		color: $sfocus;
+		background-color: lighten($background, 4%);
+	}
+	blockquote {
+		// inside paragraphs make up the top and bottom margins
+		// but if you have 0 vertical padding, they don't.
+		// they only work if you have at least 1px.
+		// using the standard 1em padding will double pad.
+		padding: 1px 0 1px 0.5em;
+	}
+	blockquote .author {
+		color: $shade;
+	}
+	blockquote .author:before {
+		content: "~ ";
+	}
+	pre {
+		padding: 1em 0 1em 0.5em;
+		white-space: pre-wrap;
+		white-space: -moz-pre-wrap;
+		white-space: -pre-wrap;
+		white-space: -o-pre-wrap;
+		word-wrap: break-word;
+		code {
+			display: block;
+			border: none;
+		}
+	}
+	code {
+		background-color: lighten($background, 4%);
+		display: inline-block;
+		font-family: SourceCodePro;
+		text-transform: none !important; // NEVER change code case
+		border: 1px solid $borders;
+		padding: 0 0.3em;
+		margin: 1px 0;
+		border-radius: 0.3em;
+	}
+
+	a {
+		color: $accent;
+		text-decoration: none;
+		@include color-transition;
+		code {
+			border-color: $borders;
+		}
+		&:hover {
+			color: $hover;
+		}
+	}
+
+	ul {
+		list-style: url(/static/bullet.png);
+		padding-left: 2em;
+	}
+
+	table {
+		width: 100%;
+		margin: 1em 0;
+		th {
+			text-align: left;
+			text-transform: uppercase;
+		}
+		td {
+			padding: 0.3em;
+		}
+	}
+
+	.source {
+		display: inline-block;
+		font-family: SourceCodePro, monospace;
+		font-weight: bold;
+		background: none;
+		color: $subtle;
+		font-size: 1em;
+		letter-spacing: 0.2em;
+		vertical-align: middle;
+		float: right;
+		margin-left: 0.3em;
+		@include color-transition;
+		&:hover {
+			color: $saccent;
+		}
+	}
+	.content {
+		margin: 1em 0;
+		padding: 0;
+	}
+
+	.poem {
+		border: none;
+		text-align: center;
+		font-family: Arial;
+	}
+}
+#toc {
+	color: $subtle;
+	display: block;
+	line-height: 1.5em;
+	width: 12.5em;
+	right: -18.5em;
+	top: 0em;
+	position: absolute;
+	border: 1px solid lighten($background, 7.5%);
+	background: lighten($background, 2.5%);
+	border-radius: 0.4em;
+	margin: 0;
+	padding: 1em 1em 1em 3em;
+	list-style-type: upper-roman;
+	li {
+		font-weight: bold;
+		li {
+			font-weight: normal;
+		}
+	}
+	li#top {
+		font-weight: normal;
+		font-style: italic;
+		list-style: none;
+	}
+	ol {
+		padding: 0 0 0 1.5em;
+		list-style-type: lower-alpha;
+	}
+	code {
+		border: none;
+		padding: 0;
+		margin: 0;
+		background: none;
+		font-family: inherit;
+	}
+	a {
+		color: $accent;
+		text-decoration: none;
+		@include color-transition;
+		&:hover {
+			color: $hover;
+		}
+	}
+}
+.nonum {
+	// why the hell do these need !important?
+	// shouldn't they override the previous stuff? guh.
+	list-style-type: none !important;
+	padding: 1em !important;
+}
+
+
+// main body container
+div#container {
+	width: 50em;
+	margin: 0 auto;
+	color: $foreground;
+}
+
+div#content {
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+
+// header (site logo)
+div#header {
+	font-size: $fontsize;
+	margin: 1em 0 0 0;
+	display: inline-block;
+
+	h1 {
+		margin: 0;
+		padding: 0;
+		font-family: Arial;
+		font-weight: bold;
+		font-size: 2em;
+		letter-spacing: 0;
+		text-transform: lowercase;
+		text-align: center;
+
+		a {
+			padding-left: 36px;
+			position: relative;
+			color: $accent;
+			text-decoration: none;
+			@include color-transition;
+			&:hover {
+				color: $hover;
+			}
+		}
+
+		img {
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+	}
+}
+
+// navigation container
+div#navbar {
+	text-align: center;
+	display: inline-block;
+}
+
+// navigation ul
+ul#nav {
+	padding: 0.3em 0 1em 0.3em;
+	margin: 0 auto;
+	font-size: 1em;
+	letter-spacing: 0.2em;
+	font-weight: normal;
+	text-transform: lowercase;
+	position: relative;
+
+	li {
+		display: inline-block;
+		list-style-type: none;
+	}
+	li:before {
+		content: " / ";
+		font-weight: normal;
+		color: $subtle;
+	}
+
+	a {
+		color: $shade;
+		text-decoration: none;
+		@include color-transition;
+		&:hover {
+			color: $accent;
+		}
+	}
+}
+
+// the section that shows pagination?
+section#pagination {
+	text-align: center;
+	font-size: 1.5em;
+	line-height: 1em;
+	padding: .67em;
+	margin: 1.33em 0;
+	a, span {
+		margin: 0 0.2em;
+		padding: 0 0.2em;
+	}
+}
+
+// footer at the bottom of the page (copyright, profile links)
+div#footer {
+	text-transform: lowercase;
+	text-align: center;
+	color: $subtle;
+	border: none;
+	background: none;
+	padding: 1.5em 0 0 0;
+	a {
+		color: saturate(lighten($subtle, 10%), 10%);
+		border: none;
+		text-decoration: none;
+		@include color-transition;
+		&:hover {
+			color: saturate(lighten($saccent, 10%), 10%);
+		}
+	}
+}
+
+// the raven!
+div#raven {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	background-image: url(/static/raven.png);
+	background-repeat: no-repeat;
+	background-position: bottom-right;
+	height: 78px;
+	width: 96px;
+	display: block;
+}
+
+// extra colors
+.house {color: hsl(244, 97%, 72%)}
+.minotaur {color: hsl(0, 100%, 50%)}
+
+.red {color: hsl(0, 100%, 75%)}
+.orange {color: hsl(30, 100%, 75%)}
+.yellow {color: hsl(60, 100%, 75%)}
+.green {color: hsl(120, 100%, 75%)}
+.blue {color: hsl(210, 100%, 75%)}
+.purple {color: hsl(270, 100%, 75%)}
+
+.strike {text-decoration: line-through}
+
+// shell palette
+.shelldefault {color: #D9D9D9}
+.shell0 {color: #2E3338}
+.shell1 {color: #454C54}
+.shell2 {color: #5C6670}
+.shell3 {color: #737F8C}
+
+.shell4 {color: #8F99A3}
+.shell5 {color: #ABB3BA}
+.shell6 {color: #C7CCD1}
+.shell7 {color: #E3E6E8}
+
+.shell8, .shellred {color: #FF4D6A}
+.shell9, .shellorange {color: #FFA64D}
+.shell10, .shellyellow {color: #E1FF4D}
+.shell11, .shellgreen {color: #6AFF4D}
+
+.shell12, .shellseafoam {color: #4DFFA6}
+.shell13, .shellcyan {color: #4DE1FF}
+.shell14, .shellblue {color: #4DA6FF}
+.shell15, .shellpurple {color: #A64DFF}
+
+.foreground {color: $foreground}
+.shade {color: $shade}
+.background {color: $background}
+.subtle {color: $subtle}
+.focus {color: $focus}
+.sfocus {color: $sfocus}
+.borders {color: $borders}
+.accent {color: $accent}
+.saccent {color: $saccent}
+.hover {color: $hover}

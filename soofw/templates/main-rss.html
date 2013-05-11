@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+	<channel>
+		<title>{{ title }}</title>
+		<link>{{ link }}</link>
+		<description>{{ desc }}</description>
+		<language>en-us</language>
+		<copyright>Copyright 2010-2013 John Weachock</copyright>
+		<managingEditor>john@soofw.com</managingEditor>
+		<webMaster>john@soofw.com</webMaster>
+		<ttl>86400</ttl>
+
+		{% for article in articles %}
+			{% include "section-rss.html" %}
+		{% endfor %}
+	</channel>
+</rss>

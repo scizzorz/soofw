@@ -1,0 +1,5 @@
+* title = soofw
+* datetime = 11/7/2012 2:19pm
+* tags = soofw
+
+It's such an inevitable question. "Soof double-you? What's that mean?" Nothing. It means absolutely nothing. "Why'd you pick it then?" It's short, looks elegant, and is really easy to type for me. Those are seriously the only requirements I had in mind when I bought the domain name a few years ago. The lowercase S at the beginning is just for style reasons; I think it looks cleaner. As for the purple, it's my favorite color. The favicon is a purple lemniscate laid across a blue hourglass. I just like those things. Time and infinity are neat. Pronunciation-wise, I say "soo-fwoo" so it rhymes with "Sue flew." You can pronounce it however you want though. It's up for debate.

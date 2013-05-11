@@ -1,0 +1,23 @@
+* title = Coderbyte Programming Challenges
+* datetime = 3/11/2012 7:23pm
+* tags = programming
+* link = http://coderbyte.com/
+
+As someone who enjoys programming as a hobby, this was an awesome experience. I spent a night on it and finished all of the challenges that I was able to and left fairly satisfied. Having some previous experience with "programming competitions/contents/challenges", I've found that often times they were actually "mathematics competitions/contests/challenges". Don't get me wrong, math is pretty great, but it's not what I want to challenge myself with. I want to think about *programming*, not *calculating*. I don't want to think of intricate formulas to deduce the exact number of times a certain card-shuffling algorithm will have to run in order to produce the original deck. I want to write a program that takes an argument, does something creative or unique with it, and then spits out a result.
+
+For example, in the [CodeSprint 2][] competition, I was given the following challenge:
+[CodeSprint 2]: http://codesprint.interviewstreet.com/recruit/challenges/
+
+> You have an unbiased coin which you want to keep tossing until you get N consecutive heads. You've tossed the coin M times and surprisingly, all tosses resulted in heads. What is the expected number of additional tosses needed until you get N consecutive heads?
+
+Wait, what? How does this involve programming? It's asking me to figure out a formula and write it in a programming language. It's not an ideal question to ask if you want to test someone's programming knowledge. If you want to test their statistics and probability skills, ask away, but if you want to see how good they are at the kind of thinking programming requires, maybe you should reconsider.
+
+Coderbyte, however, gave me a plethora of excellent programming challenges. I'm not saying that every question was a stellar example, because a few were a bit mathy, but it had a much more favorable programming to math ratio. For example,
+
+> Have the function `RunLength(str)` take the `str` parameter being passed and return a compressed version of the string using the Run-length encoding algorithm. This algorithm works by taking the occurrence of each repeating character and outputting that number along with a single character of the repeating sequence. For example: `"wwwggopp"` would return `"3w2g1o2p"`. The string will not contain any numbers, punctuation, or symbols.
+
+This is a question that tests my programming. I don't have to figure out all of the possible non-intersecting diagonals of a polygon with N vertices (another CodeSprint question), I have to make a few variables and loop through a string, keeping track of some stuff as I go. It's that simple.
+
+I realize that the two competitions are designed with two radically different goals and difficulties, but I still feel that a "programming challenge" should stay true to its name - programming - instead of fleeing to the treacherous territory of math.
+
+Strictly as an aside, I would also like to *strongly advise* that any aspiring programmers at least attempt the challenges on Coderbyte. The best way to improve your programming is to program things, and Coderbyte has quite a few entry-level programming challenges that are perfect for beginners. If you have any interest at all in becoming a good programmer, **do these challenges**.

@@ -1,0 +1,33 @@
+* title = Learning to Program
+* datetime = 11/11/2012 6:49pm
+* tags = programming
+
+So you want to learn to program? Great! It's an absurdly [powerful](http://programmingzen.com/2011/03/21/programming-is-a-super-power/) and [beautiful](http://stevelosh.com/blog/2008/08/beauty-in-computer-science-recursion/) hobby to pick up. Unfortunately, it can be pretty difficult to pick up on some of the fundamental concepts if you aren't a "natural" programmer, but that doesn't mean it's impossible. Being able to program, in my opinion, is an unbelievable and unparalleled skill. As a programmer, you can take plain old thoughts, organize them into a few dozen (or more) lines of code, and it will actually *do* something. You can imagine a red ball bouncing across the screen and actually [make a red ball bouncing across the screen](http://soofw.com/up/ball/). And you don't need anything more than a computer, which I'm assuming you have if you're reading this article: you can do all of that with just [jsFiddle](http://jsfiddle.net/g9qjd/3/). It's incredible. All of this amazing potential is right at your fingertips; all of the groundwork has already been laid out for you to make amazing things. All you have to do is learn how. So... how do you do that?
+
+## Basics
+
+Get the basics down. There's dozens of free tutorials and books available on the internet that are specifically designed for beginning programmers. Probably even hundreds. Several universities such as MIT and Stanford are even offering free computer science courses online. The rest of this article assumes you've got at least the fundamental concepts of programming down, although even if you don't you could still benefit from some of the remaining points.
+
+## Ask
+
+Ask questions. If you don't understand something, ask someone how it works. If you're lost and can't get your program to work correctly, ask someone who has more experience. If you don't know anyone who would be able to help, ask the internet. [StackOverflow](http://stackoverflow.com/) is an amazing place for programming questions and answers, and it has side projects for almost any field of study imaginable. [Quora](https://www.quora.com/) can also be an incredibly helpful tool when it comes to having questions answered or finding resources.
+
+## Read
+
+Read code, blogs, books, tutorials, etc. By reading someone else's code, you can expose yourself to new ideas and methods of thinking. There's an unlimited number of ways you can solve any given problem with programming, but it's certainly not easy to solve every problem the same way. When you read someone else's code you can pick up new techniques and solutions for problems. I can't even count the number of times I've been trying to solve a problem with one method only to see someone else's solution that was magnitudes greater than mine in terms of performance or elegance. Blogs can also expose you to new material, provide you with awesome tips and tricks, and also help you to avoid some common pitfalls that usually come through experience. Tutorials and books are great for teaching specific concepts and covering a wide range of information.
+
+## Effective Text Editing
+
+It's no secret that I love vim. It's an absolutely marvelous text editor with an almost unlimited amount of power. Unfortunately, it has a very steep learning curve which can make it pretty difficult to get started with. Fortunately, there's dozens of articles about how to make the switch from standard text editing. If you aren't ready to pick up an advanced text editor like vim, find a good traditional text editor that you like and *learn it well*. I've never used either of these, but I hear that TextMate and SublimeText are both pretty handy if you can't let go of point-and-click mouse interfaces (which I recommend you do let go of; mice are slow!). It's almost painful for me to watch people fumble with text editors as they code because they aren't familiar with them. If you're actually going to program, you'll be spending hours of time in a text editor. It's crucial that you familiarize yourself with it and understand how it works.
+
+## Version Control
+
+Another item of critical importance. Version control is a must for serious programmers. There's nothing more unfortunate than accidentally deleting a file or line of code and having no backups to restore from. It doesn't matter whether you use Subversion, Mercurial, Git, or even CVS. Just use version control. It allows you to manage, record, version, revise, and restore your code with ease. Even better, it makes collaboration with other people fluid and seamless. Dump all those confusing email chains and backup files clogging your workflow and pick up a nice version control system. Spend some time familiarizing yourself with its workflow, too. You might even want to check out [GitHub](http://github.com/) or [BitBucket](https://bitbucket.org/). Both services offer free version control hosting and expose your code to *other* people, which can also be helpful. You might end up with master programmer's reviewing your work and providing you with constructive criticism.
+
+## Personal Projects
+
+It's hard to learn things unless they interest you. If you're only programming for external reasons like school or work, it's harder to internalize the concepts and techniques you're using. If the actual program is providing all of your motivation, it pulls you in and encourages you to learn more so you can make it better. By creating a personal project like a simple [to do list](http://github.com/scizzorz/trk), you actually become involved in the program. You want it to be awesome because it's personal; it's a project for *you*, not some professor or employer. You are directly reaping the benefits of improving a personal project, which encourages you to make it even better.
+
+## Practice
+
+Similar to personal projects. The best way to get better at something is to practice it, so if you want to become a good programmer, you have to practice. [CoderByte](http://coderbyte.com) has a bunch of programming challenges for entry-level and moderately skilled programmers. [Copying Unix](http://www.rodrigoalvesvieira.com/copy-unix/) can be another great set of challenges to practice with. If you can't think of any personal projects you want to make, just write a program that does *something* so you can get more experience. Who knows, it might turn out to be [pretty cool](http://soofw.com/demos/heart++) in the end.

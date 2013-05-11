@@ -1,0 +1,7 @@
+<item>
+	<title>{{ article.title }}</title>
+	<description>{{ article.render() }}</description>
+	<pubDate>{{ article|date_rss }}</pubDate>
+	<guid>http://soofw.com/{{ article.path }}/{{ article.basename[:-3] }}/</guid>
+	<link>http://soofw.com/{{ article.path }}/{{ article.basename[:-3] }}/</link>
+</item>

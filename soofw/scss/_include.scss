@@ -1,0 +1,54 @@
+// color scheme
+$foreground = hsl(210, 10%, 90%);
+$shade      = hsl(210, 10%, 60%);
+$background = hsl(240, 10%, 5%);
+
+$subtle  = hsl(210, 10%, 40%);
+$focus   = hsl(210, 80%, 80%);
+$sfocus  = hsl(210, 10%, 80%);
+$borders = hsl(210, 10%, 25%);
+
+$accent  = hsl(210, 100%, 75%);
+$saccent = hsl(210, 30%, 60%);
+$hover   = hsl(210, 100%, 100%);
+
+$fontsize = 10pt;
+
+// mixins
+@mixin transition($prop) {
+	transition: $prop;
+	-webkit-transition: $prop;
+	-moz-transition: $prop;
+	-o-transition: $prop;
+}
+@mixin color-transition {
+	@include transition(color 0.2s);
+}
+
+// extra fonts
+// SourceCodePro
+@font-face {
+	font-family: SourceCodePro;
+	src: url(/static/source-code-pro.ttf);
+}
+
+// Roboto
+@font-face {
+	font-family: Roboto;
+	src: url(/static/roboto.ttf);
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: Roboto;
+	src: url(/static/roboto-bold.ttf);
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: Roboto;
+	src: url(/static/roboto-italic.ttf);
+	font-weight: normal;
+	font-style: italic;
+}
+

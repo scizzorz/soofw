@@ -1,0 +1,9 @@
+{% extends "main.html" %}
+
+{% block title %}
+	source: {{ article.basename[:-3] }}{{ super() }}
+{% endblock %}
+
+{% block content %}
+	{% include "section-source.html" %}
+{% endblock %}
