@@ -4,7 +4,7 @@
 	{% for t in tags %}
 	<li><a href="{{ url_for('view_list', tag=t, post_path=path) }}">{{ t }}</a></li>
 	{% endfor %}
-	<li id="top"><a href="#container">(back to top)</a></li>
+	<li id="top"><a href="#container">back to top</a></li>
 	</ol>
 	{% for article in articles %}
 		{% include "section-single.html" %}

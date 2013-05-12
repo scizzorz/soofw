@@ -89,7 +89,7 @@ def toc(html, nonum = False):
 	# close any remaining lists
 	while list_depth > 0:
 		if list_depth == 1:
-			contents += '</li>\n<li id="top"><a href="#container">(back to top)</a></li>\n</ol>\n'
+			contents += '</li>\n<li id="top"><a href="#container">back to top</a></li>\n</ol>\n'
 		else:
 			contents += '</li>\n</ol>\n'
 		list_depth -= 1
