@@ -1,6 +1,7 @@
 {% extends "main.html" %}
 {% block content %}
 	<ol id="toc" class="nonum">
+		<li id="archive"><a href="{{ url_for('view_archive', post_path=path) }}">archive</a></li>
 		{% for tag in tags %}
 			<li><a href="{{ url_for('view_list', tag=tag, post_path=path) }}">{{ tag }}</a></li>
 		{% endfor %}

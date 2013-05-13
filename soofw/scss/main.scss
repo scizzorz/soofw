@@ -234,10 +234,20 @@ section {
 			font-weight: normal;
 		}
 	}
-	li#top {
-		font-weight: normal;
+	li#top, li#archive {
 		font-style: italic;
 		list-style: none;
+		border: none;
+	}
+	li#archive {
+		margin-bottom: 0.3em;
+		padding-bottom: 0.3em;
+		border-bottom: 1px dotted $borders;
+	}
+	li#top {
+		margin-top: 0.3em;
+		padding-top: 0.3em;
+		border-top: 1px dotted $borders;
 	}
 	ol {
 		padding: 0 0 0 1.5em;

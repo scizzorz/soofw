@@ -66,6 +66,38 @@ def view_list(post_path, tag = None, page = 1, posts_per_page = 6):
 			navkey = navkey,
 			navigation = NAVIGATION)
 
+# view a tag-sorted list of post titles
+@app.route('/thoughts/archive/', defaults = {'post_path':'thoughts'})
+@app.route('/snippets/archive/', defaults = {'post_path':'snippets'})
+def view_archive(post_path):
+	# open all the articles as previews
+	try:
+		articles = post.get_posts(post_path, mode = 'preview')
+	except post.PostNotFoundError:
+		flask.abort(404)
+	else:
+		# make them reverse chronological order
+		articles.reverse()
+
+		bundle = {}
+		tags = []
+		for article in articles:
+			if 'tags' in article:
+				for tag in article['tags']:
+					if tag not in tags:
+						tags.append(tag)
+
+					if tag not in bundle:
+						bundle[tag] = []
+
+					bundle[tag].append(article)
+
+	return flask.render_template('main-archive.html',
+			bundle = bundle,
+			tags = sorted(tags),
+			path = post_path,
+			navigation = NAVIGATION)
+
 # view an RSS feed
 @app.route('/thoughts/rss.xml', defaults = {'post_path':'thoughts'})
 @app.route('/snippets/rss.xml', defaults = {'post_path':'snippets'})
