@@ -291,7 +291,7 @@ div#content {
 }
 
 // header (site logo)
-div#header {
+header {
 	font-size: $fontsize;
 	margin: 1em 0 0 0;
 	display: inline-block;
@@ -326,7 +326,7 @@ div#header {
 }
 
 // navigation container
-div#navbar {
+nav {
 	text-align: center;
 	display: inline-block;
 }
@@ -375,7 +375,8 @@ section#pagination {
 }
 
 // footer at the bottom of the page (copyright, profile links)
-div#footer {
+footer {
+	display: block;
 	text-transform: lowercase;
 	text-align: center;
 	color: $subtle;

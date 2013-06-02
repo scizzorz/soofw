@@ -4,8 +4,8 @@
 		<title>{% block title -%}{{ title }} / soofw{%- endblock %}</title>
 		<meta charset="utf-8">
 		<link rel="icon" type="image/png" href="/static/favicon.ico">
-		<link rel="stylesheet" type="text/css" href="/static/main.css"/>
-		<link rel="alternate" title="thoughts / soofw" type="application/rss+xml" href="/thoughts/rss.xml"/>
+		<link rel="stylesheet" type="text/css" href="/static/main.css">
+		<link rel="alternate" title="thoughts / soofw" type="application/rss+xml" href="/thoughts/rss.xml">
 		<script type="text/javascript" src="/static/main.js"></script>
 		<script type="text/javascript">
 			var _gaq = _gaq || [];
@@ -20,16 +20,16 @@
 	</head>
 	<body>
 		<div id="container">
-			<div id="header">
+			<header>
 				<h1>
 					<a href="/">
-						<img class="transition normal" src="/static/logo-small.png" alt="logo"/>
-						<img class="transition hover" src="/static/logo-small-hover.png" alt="logo"/>
+						<img class="transition normal" src="/static/logo-small.png" alt="logo">
+						<img class="transition hover" src="/static/logo-small-hover.png" alt="logo">
 						soofw
 					</a>
 				</h1>
-			</div>
-			<div id="navbar">
+			</header>
+			<nav>
 				<ul id="nav">
 					{% for item in navigation -%}
 						{% if item == navkey %}
@@ -39,20 +39,20 @@
 						{% endif %}
 					{%- endfor %}
 				</ul>
-			</div>
+			</nav>
 			<div id="content">
 				{% block content %}
 					{{ content|safe }}
 				{% endblock %}
 			</div>
-			<div id="footer">
+			<footer>
 				&copy; John Weachock (scizzorz) 2010 - 2013
 				&#8210; <a href="&#x6d;&#97;i&#108;&#116;&#111;:&#x6a;&#x77;&#101;&#x61;&#x63;&#x68;&#111;&#99;&#x6b;&#x40;&#x67;&#x6d;&#97;i&#x6c;&#x2e;&#99;o&#109;">Email</a> <!-- oh my god markdown you've made a monster -->
 				/ <a href="https://plus.google.com/113432347868678447107/posts" target="_blank">Google+</a>
 				/ <a href="https://twitter.com/scizzxorz" target="_blank">Twitter</a>
 				/ <a href="https://github.com/scizzorz" target="_blank">GitHub</a>
 				/ <a href="https://delicious.com/scizzorz" target="_blank">Delicious</a>
-				<br/>powered by
+				<br>powered by
 				<a href="http://www.python.org/">Python</a>
 				/ <a href="http://flask.pocoo.org/">Flask</a>
 				/ <a href="http://daringfireball.net/projects/markdown/">Markdown</a>
@@ -60,7 +60,7 @@
 				/ <a href="http://www.nginx.org/">nginx</a>
 				/ <a href="http://www.ubuntu.com/">Ubuntu</a>
 				/ <a href="http://www.linode.com/">Linode</a>
-			</div>
+			</footer>
 		</div>
 		<div id="raven" title="All that we see or seem is but a dream within a dream."></div>
 	</body>
