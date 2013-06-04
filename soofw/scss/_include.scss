@@ -1,16 +1,16 @@
 // color scheme
-$foreground = hsl(210, 10%, 90%);
+$foreground = hsl(210, 10%, 5%);
 $shade      = hsl(210, 10%, 60%);
-$background = hsl(240, 10%, 5%);
+$background = hsl(240, 10%, 97.5%);
 
-$subtle  = hsl(210, 10%, 40%);
-$focus   = hsl(210, 80%, 80%);
-$sfocus  = hsl(210, 10%, 80%);
-$borders = hsl(210, 10%, 25%);
+$subtle  = hsl(210, 10%, 50%);
+$focus   = hsl(210, 80%, 20%);
+$sfocus  = hsl(210, 10%, 20%);
+$borders = hsl(210, 10%, 75%);
 
-$accent  = hsl(210, 100%, 75%);
-$saccent = hsl(210, 30%, 60%);
-$hover   = hsl(210, 100%, 100%);
+$accent  = hsl(210, 100%, 50%);
+$saccent = hsl(210, 30%, 30%);
+$hover   = hsl(210, 100%, 70%);
 
 $fontsize = 10pt;
 
