@@ -6,7 +6,7 @@ It's almost been two weeks since I open-sourced the web site and I haven't even 
 
 * **The new home page** is alright. I didn't like the thoughts list being the front page, so I just made a small about page or something.
 * **Layout, style,  and usability improvements** turned out pretty well, I think. Some notable improvements are the table of contents feature on each page, bigger line spacing, and a wider column. I also added tags/categories again, but I'm still pretty confident that [Google does it better](http://google.com/#q=site:soofw.com+vim).
-* **Updated [projects](http://soofw.com/projects/) and [demos](http://soofw.com/demos/) pages** seem better as well. I pretty much just reorganized everythying and updated the formatting a little bit.
+* **Updated [projects](http://soofw.com/projects/) and [demos](http://soofw.com/demos/) pages** seem better as well. I pretty much just reorganized everything and updated the formatting a little bit.
 * A **[links](http://soofw.com/links/)** page to archive all sorts of interesting articles I find.
 * An **[archive](http://soofw.com/thoughts/archive/)** page that just lists all of my post headlines by category. Seems pretty alright.
 * **[Flask](http://flask.pocoo.org/)** is awesome. I transitioned to it from my own framework and I'm blown away by how easy and powerful it was. The development server that comes packaged inside is phenomenal amnd makes development tremendously easy. Switching between web site projects is vastly easier than mucking with all the Apache configuration files.
