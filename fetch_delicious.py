@@ -54,7 +54,7 @@ Here are some links I found and thought were pretty cool. They're grouped by tag
 
 			#print "\t%s @ %s" % (bookmark[TITLE], base_url)
 			format_tuple = (bookmark[TITLE], bookmark[URL], base_url)
-			filed.write('* [**%s**](%s) <span class="subtle">%s</span>\n\n' % format_tuple)
+			filed.write('* **[%s](%s)** <span class="subtle">%s</span>\n\n' % format_tuple)
 			if bookmark[COMMENT]:
 				filed.write("  %s\n\n" % bookmark[COMMENT])
 
