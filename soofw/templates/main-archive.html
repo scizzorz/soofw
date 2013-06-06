@@ -3,11 +3,11 @@
 	{{ path }} / archive {{ super() }}
 {% endblock %}
 {% block content %}
-	<ol id="toc" class="nonum">
-		<li id="archive"><a href="{{ url_for('view_list', post_path=path) }}">posts</a></li>
+	<ol id="toc" class="shaded-links nonum">
 		{% for tag in tags %}
 			<li><a href="#{{ tag }}">{{ tag }}</a></li>
 		{% endfor %}
+		<li id="archive"><a href="{{ url_for('view_list', post_path=path) }}">back to posts</a></li>
 		<li id="top"><a href="#container">back to top</a></li>
 	</ol>
 	<section>

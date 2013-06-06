@@ -29,28 +29,30 @@ a:hover .hover {
 hr {
 	margin: 0.3em 0;
 	border: none;
-	border-bottom: 1px dotted $borders;
+	border-bottom: 1px solid $borders;
 }
 
 // each post is contained in a section
 section {
 	margin: 2em 0;
 	padding: 1em 1em 1px 1em; // stupid paragraph margins at the bottom of the section ruin the padding
-	border-radius: 0.3em;
-	border: 1px solid darken($background, 7.5%);
-	background: darken($background, 2.5%);
 	line-height: 1.5em;
+	text-align: justify;
 
 	// headers
 	h1, h2, h3 {
 		padding: 0;
 		margin: 0;
 		letter-spacing: 0.1em;
+		color: $strong;
 		.sub {
 			font-size: $fontsize;
 			letter-spacing: 0;
 			font-weight: normal;
 		}
+	}
+	strong, em {
+		color: $strong;
 	}
 	h1 {
 		font-size: 1.3em;
@@ -73,7 +75,7 @@ section {
 	h2 {
 		font-size: 1.2em;
 		padding: 0 0 0.3em 0;
-		border-bottom: 1px dotted $borders;
+		border-bottom: 1px solid $borders;
 		margin: 2em 0 0.3em 0;
 		text-transform: uppercase;
 	}
@@ -85,22 +87,13 @@ section {
 	}
 
 	.tags {
-		color: $subtle;
+		color: $shade;
 		font-size: 1em;
 		text-transform: lowercase;
 		display: block;
-		a {
-			color: $subtle;
-			@include color-transition;
-
-			&:hover {
-				color: $hover;
-			}
-		}
 	}
 
-	& > p {
-		text-align: justify;
+	p {
 		margin: 1em 0;
 		padding: 0 1em;
 	}
@@ -110,17 +103,17 @@ section {
 		padding: 0.3em;
 		display: block;
 		max-width: 40em;
-		border: 1px dotted $borders;
+		background-color: darken($background, 5%);
+		border: 1px solid $shade;
 	}
 
 	blockquote, pre {
 		display: block;
 		margin: 1em;
 		border-width: 1px 1px 1px 0.3em;
-		border-style: dotted dotted dotted solid;
+		border-style: solid;
 		border-color: $borders;
-		color: $sfocus;
-		background-color: darken($background, 4%);
+		background-color: darken($background, 5%);
 	}
 	blockquote {
 		// inside paragraphs make up the top and bottom margins
@@ -148,14 +141,13 @@ section {
 		}
 	}
 	code {
-		background-color: darken($background, 4%);
+		background-color: darken($background, 5%);
 		display: inline-block;
 		font-family: SourceCodePro;
 		text-transform: none !important; // NEVER change code case
-		border: 1px solid $borders;
+		border: none;
 		padding: 0 0.3em;
 		margin: 1px 0;
-		border-radius: 0.3em;
 	}
 
 	a {
@@ -187,22 +179,6 @@ section {
 		}
 	}
 
-	.source {
-		display: inline-block;
-		font-family: SourceCodePro, monospace;
-		font-weight: bold;
-		background: none;
-		color: $subtle;
-		font-size: 1em;
-		letter-spacing: 0.2em;
-		vertical-align: middle;
-		float: right;
-		margin-left: 0.3em;
-		@include color-transition;
-		&:hover {
-			color: $saccent;
-		}
-	}
 	.content {
 		margin: 1em 0;
 		padding: 0;
@@ -215,19 +191,17 @@ section {
 	}
 }
 #toc {
-	color: $subtle;
+	color: $shade;
 	display: block;
 	line-height: 1.5em;
-	width: 12.5em;
-	right: -18.5em;
+	width: 15em;
+	right: -21em;
 	top: 0em;
 	position: absolute;
-	border: 1px solid darken($background, 7.5%);
-	background: darken($background, 2.5%);
-	border-radius: 0.4em;
 	margin: 0;
 	padding: 1em 1em 1em 3em;
 	list-style-type: upper-roman;
+
 	li {
 		font-weight: bold;
 		li {
@@ -238,17 +212,15 @@ section {
 		font-style: italic;
 		list-style: none;
 		border: none;
-	}
-	li#archive {
-		margin-bottom: 0.3em;
-		padding-bottom: 0.3em;
-		border-bottom: 1px dotted $borders;
-	}
-	li#top {
 		margin-top: 0.3em;
 		padding-top: 0.3em;
-		border-top: 1px dotted $borders;
 	}
+	// don't add padding above the #top if it's preceded by an #archive
+	li#archive + li#top {
+		margin-top: 0;
+		padding-top: 0;
+	}
+
 	ol {
 		padding: 0 0 0 1.5em;
 		list-style-type: lower-alpha;
@@ -259,14 +231,6 @@ section {
 		margin: 0;
 		background: none;
 		font-family: inherit;
-	}
-	a {
-		color: $accent;
-		text-decoration: none;
-		@include color-transition;
-		&:hover {
-			color: $hover;
-		}
 	}
 }
 .nonum {
@@ -294,7 +258,8 @@ div#content {
 header {
 	font-size: $fontsize;
 	margin: 1em 0 0 0;
-	display: inline-block;
+	display: block;
+	text-align: center;
 
 	h1 {
 		margin: 0;
@@ -305,6 +270,7 @@ header {
 		letter-spacing: 0;
 		text-transform: lowercase;
 		text-align: center;
+		display: inline-block;
 
 		a {
 			padding-left: 36px;
@@ -342,22 +308,14 @@ ul#nav {
 	position: relative;
 
 	li {
+		color: $strong;
 		display: inline-block;
 		list-style-type: none;
 	}
 	li:before {
 		content: " / ";
 		font-weight: normal;
-		color: $subtle;
-	}
-
-	a {
-		color: $shade;
-		text-decoration: none;
-		@include color-transition;
-		&:hover {
-			color: $accent;
-		}
+		color: $borders;
 	}
 }
 
@@ -379,21 +337,23 @@ footer {
 	display: block;
 	text-transform: lowercase;
 	text-align: center;
-	color: $subtle;
+	color: $shade;
 	border: none;
 	background: none;
 	padding: 1.5em 0 0 0;
+}
+
+.shaded-links {
 	a {
-		color: saturate(darken($subtle, 10%), 10%);
-		border: none;
+		color: $shade;
 		text-decoration: none;
 		@include color-transition;
 		&:hover {
-			//color: saturate(darken($hover, 10%), 10%);
-			color: $hover;
+			color: $accent;
 		}
 	}
 }
+
 
 // the raven!
 div#raven {
@@ -442,14 +402,3 @@ div#raven {
 .shell13, .shellcyan {color: #4DE1FF}
 .shell14, .shellblue {color: #4DA6FF}
 .shell15, .shellpurple {color: #A64DFF}
-
-.foreground {color: $foreground}
-.shade {color: $shade}
-.background {color: $background}
-.subtle {color: $subtle}
-.focus {color: $focus}
-.sfocus {color: $sfocus}
-.borders {color: $borders}
-.accent {color: $accent}
-.saccent {color: $saccent}
-.hover {color: $hover}

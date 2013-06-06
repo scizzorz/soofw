@@ -1,17 +1,17 @@
 {% extends "main.html" %}
 {% block content %}
-	<ol id="toc" class="nonum">
-		<li id="archive"><a href="{{ url_for('view_archive', post_path=path) }}">archive</a></li>
+	<ol id="toc" class="nonum shaded-links">
 		{% for tag in tags %}
 			<li><a href="{{ url_for('view_list', tag=tag, post_path=path) }}">{{ tag }}</a></li>
 		{% endfor %}
+		<li id="archive"><a href="{{ url_for('view_archive', post_path=path) }}">archive</a></li>
 		<li id="top"><a href="#container">back to top</a></li>
 	</ol>
 	{% for article in articles %}
 		{% include "section-single.html" %}
 	{% endfor %}
 	{% if pages > 1 %}
-		<section id="pagination">
+		<section id="pagination" class="shaded-links">
 			{% for i in range(pages) %}
 				{% if i == page %}
 					<span>{{ i+1 }}</span>
