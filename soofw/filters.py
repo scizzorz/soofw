@@ -76,6 +76,14 @@ def format_date_prep(article):
 	# default: "on" may 27th
 	return 'on'
 
+@app.template_filter('date_short')
+def format_date_short(article):
+	date_fmt = '%b %Y'
+
+	time_struct = time.localtime(article.timestamp)
+
+	return time.strftime(date_fmt, time_struct)
+
 
 # format the date for the RSS feed
 @app.template_filter('date_rss')
