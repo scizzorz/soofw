@@ -34,7 +34,7 @@ hr {
 
 // each post is contained in a section
 section {
-	margin: 2em 0;
+	margin: 0 0 2em 0;
 	padding: 1em 1em 1px 1em; // stupid paragraph margins at the bottom of the section ruin the padding
 	line-height: 1.5em;
 	text-align: justify;
@@ -67,8 +67,8 @@ section {
 		}
 		a:after {
 			content: " »";
-			font-size: 1.3em;
-			line-height: 1.3em;
+			font-size: 1.25em;
+			line-height: 1.25em;
 			text-decoration: none;
 		}
 	}
@@ -118,7 +118,7 @@ section {
 		// but if you have 0 vertical padding, they don't.
 		// they only work if you have at least 1px.
 		// using the standard 1em padding will double pad.
-		padding: 1px 0 1px 0.5em;
+		padding: 1px 0;
 	}
 	blockquote .author {
 		color: $shade;
@@ -162,7 +162,7 @@ section {
 
 	ul {
 		list-style: url(/static/bullet.png);
-		padding-left: 2em;
+		padding: 0 1em 0 2em;
 	}
 
 	table {
@@ -255,7 +255,7 @@ div#content {
 // header (site logo)
 header {
 	font-size: $fontsize;
-	margin: 1em 0 0 0;
+	margin: 2em 0 1em 0;
 	display: block;
 	text-align: center;
 
@@ -273,7 +273,7 @@ header {
 		a {
 			padding-left: 36px;
 			position: relative;
-			color: $accent;
+			color: $strong;
 			text-decoration: none;
 			@include color-transition;
 			&:hover {
@@ -297,9 +297,9 @@ nav {
 
 // navigation ul
 ul#nav {
-	padding: 0.3em 0 1em 0.3em;
-	margin: 0 auto;
-	font-size: 1em;
+	padding: 0;
+	margin: 0;
+	font-size: 1.2em;
 	letter-spacing: 0.2em;
 	font-weight: normal;
 	text-transform: lowercase;
@@ -310,7 +310,7 @@ ul#nav {
 		display: inline-block;
 		list-style-type: none;
 	}
-	li:before {
+	li + li:before {
 		content: " / ";
 		font-weight: normal;
 		color: $borders;
@@ -320,7 +320,7 @@ ul#nav {
 // the section that shows pagination?
 section#pagination {
 	text-align: center;
-	font-size: 1.5em;
+	font-size: 1.2em;
 	line-height: 1em;
 	padding: .67em;
 	margin: 1.33em 0;
