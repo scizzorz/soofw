@@ -21,32 +21,30 @@
 	<body>
 		<div id="container">
 			<header>
-				<h1>
-					<a href="/">
-						<img class="transition normal" src="/static/logo-small.png" alt="logo">
-						<img class="transition hover" src="/static/logo-small-hover.png" alt="logo">
-						soofw
-					</a>
-				</h1>
-			</header>
-			<nav>
-				<ul id="nav">
-					{% for item in navigation -%}
-						{% if item == navkey %}
-							<li>{{ item }}</li>
+				<nav>
+					<ul id="nav" class="shaded-links">
+						{% if navkey == 'home' %}
+							<li>soofw</li>
 						{% else %}
-							<li><a href="/{{ item }}">{{ item }}</a></li>
+							<li><a href="/">soofw</a></li>
 						{% endif %}
-					{%- endfor %}
-				</ul>
-			</nav>
+						{% for item in navigation -%}
+							{% if item == navkey %}
+								<li>{{ item }}</li>
+							{% else %}
+								<li><a href="/{{ item }}/">{{ item }}</a></li>
+							{% endif %}
+						{%- endfor %}
+					</ul>
+				</nav>
+			</header>
 			<div id="content">
 				{% block content %}
 					{{ content|safe }}
 				{% endblock %}
 			</div>
-			<footer>
-				&copy; John Weachock (scizzorz) 2010 - 2013
+			<footer class="shaded-links">
+				John Weachock / scizzorz &copy; 2013
 				&#8210; <a href="&#x6d;&#97;i&#108;&#116;&#111;:&#x6a;&#x77;&#101;&#x61;&#x63;&#x68;&#111;&#99;&#x6b;&#x40;&#x67;&#x6d;&#97;i&#x6c;&#x2e;&#99;o&#109;">Email</a> <!-- oh my god markdown you've made a monster -->
 				/ <a href="https://plus.google.com/113432347868678447107/posts" target="_blank">Google+</a>
 				/ <a href="https://twitter.com/scizzxorz" target="_blank">Twitter</a>

@@ -58,9 +58,9 @@ def toc(html, nonum = False):
 		if header_depth == 0:
 			# so open with an id'd <ol> and increment list depth
 			if nonum:
-				contents += '<ol id="toc" class="nonum">'
+				contents += '<ol id="toc" class="nonum shaded-links">'
 			else:
-				contents += '<ol id="toc">\n'
+				contents += '<ol id="toc" class="shaded-links">\n'
 			list_depth += 1
 
 		#  we've indented more

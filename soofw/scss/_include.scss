@@ -1,18 +1,24 @@
 // color scheme
-$foreground = hsl(210, 10%, 90%);
-$shade      = hsl(210, 10%, 60%);
-$background = hsl(240, 10%, 5%);
+$foreground = hsl(0, 0%, 30%);
+$strong     = hsl(0, 0%, 10%);
+$shade      = hsl(0, 0%, 50%);
+$background = hsl(0, 0%, 95%);
+$borders    = hsl(0, 0%, 75%);
 
-$subtle  = hsl(210, 10%, 40%);
-$focus   = hsl(210, 80%, 80%);
-$sfocus  = hsl(210, 10%, 80%);
-$borders = hsl(210, 10%, 25%);
-
-$accent  = hsl(210, 100%, 75%);
-$saccent = hsl(210, 30%, 60%);
-$hover   = hsl(210, 100%, 100%);
+$accent     = hsl(210, 100%, 50%);
+$hover      = hsl(210, 100%, 70%);
 
 $fontsize = 10pt;
+
+// color classes
+.foreground {color: $foreground}
+.strong {color: $strong}
+.shade {color: $shade}
+.background {color: $background}
+.borders {color: $borders}
+
+.accent {color: $accent}
+.hover {color: $hover}
 
 // mixins
 @mixin transition($prop) {
