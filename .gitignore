@@ -1,4 +1,4 @@
-soofw/*.pyc
+*.pyc
 soofw/static/*.css
 soofw/content/links.md
 drafts
