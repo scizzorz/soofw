@@ -20,7 +20,7 @@ window.onload = function() {
 		var sec_off = offset(element);
 		toc.style.position = "fixed";
 		toc.style.top = Math.max(2*em, 80 - window.pageYOffset) + "px";
-		toc.style.left = (sec_off[3] + element.offsetWidth + 2*em - 4) + "px";
+		toc.style.left = (sec_off[3] + element.offsetWidth + 1*em - 4) + "px";
 		toc.style.right = null;
 	}
 
