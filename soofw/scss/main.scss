@@ -258,35 +258,9 @@ header {
 	margin: 2em 0 1em 0;
 	display: block;
 	text-align: center;
-
-	h1 {
-		margin: 0;
-		padding: 0;
-		font-family: Arial;
-		font-weight: bold;
-		font-size: 2em;
-		letter-spacing: 0;
-		text-transform: lowercase;
-		text-align: center;
-		display: inline-block;
-
-		a {
-			padding-left: 36px;
-			position: relative;
-			color: $strong;
-			text-decoration: none;
-			@include color-transition;
-			&:hover {
-				color: $hover;
-			}
-		}
-
-		img {
-			position: absolute;
-			left: 0;
-			top: 0;
-		}
-	}
+}
+.logo {
+	font-weight: bold;
 }
 
 // navigation container
