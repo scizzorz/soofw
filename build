@@ -14,11 +14,14 @@ def clean():
 @requires('soofw/scss/main.scss', 'soofw/scss/_include.scss')
 def css():
 	'Compiles the SCSS into CSS.'
-	import scss
-	_scss = scss.Scss({}, {'compress': False, 'debug_info': False})
 
-	main_file = open('soofw/static/main.css', 'w')
-	main_file.write(_scss.compile(scss_file = 'soofw/scss/main.scss'))
+	# only build CSS if the SCSS is newer
+	if age('soofw/scss/main.scss', 'soofw/scss/_include.scss') < age('soofw/static/main.css'):
+		import scss
+		_scss = scss.Scss({}, {'compress': False, 'debug_info': False})
+
+		main_file = open('soofw/static/main.css', 'w')
+		main_file.write(_scss.compile(scss_file = 'soofw/scss/main.scss'))
 
 @task
 def links():
