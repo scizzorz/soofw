@@ -289,6 +289,10 @@ ul#nav {
 		font-weight: normal;
 		color: $borders;
 	}
+
+	.nav-thoughts:before, .nav-links:before {
+		content: " // ";
+	}
 }
 
 // the section that shows pagination?

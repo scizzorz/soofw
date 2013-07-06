@@ -56,5 +56,7 @@ Here are some links I found and thought were pretty cool. They're grouped by tag
 			format_tuple = (bookmark[TITLE], bookmark[URL], base_url)
 			filed.write('* **[%s](%s)** <span class="shade">%s</span>\n' % format_tuple)
 
+	filed.close()
+
 if __name__ == '__main__':
 	main()

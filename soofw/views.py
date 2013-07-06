@@ -2,18 +2,13 @@ import flask # dependencies
 from soofw import app, post # local
 
 # navigation links
-NAVIGATION =  ['thoughts', 'snippets', 'links', 'projects', 'demos']
+NAVIGATION =  ['thoughts', 'projects', 'demos', 'links']
 
 # view a list of posts
 @app.route('/thoughts/', defaults = {'post_path':'thoughts'})
 @app.route('/thoughts/<int:page>/', defaults = {'post_path':'thoughts'})
 @app.route('/thoughts/tag/<string:tag>/', defaults = {'post_path':'thoughts'})
 @app.route('/thoughts/tag/<string:tag>/<int:page>/', defaults = {'post_path':'thoughts'})
-
-@app.route('/snippets/', defaults = {'post_path':'snippets'})
-@app.route('/snippets/<int:page>/', defaults = {'post_path':'snippets'})
-@app.route('/snippets/tag/<string:tag>/', defaults = {'post_path':'snippets'})
-@app.route('/snippets/tag/<string:tag>/<int:page>/', defaults = {'post_path':'snippets'})
 def view_list(post_path, tag = None, page = 1, posts_per_page = 6):
 	# open all the articles as previews
 	try:
@@ -68,7 +63,6 @@ def view_list(post_path, tag = None, page = 1, posts_per_page = 6):
 
 # view a tag-sorted list of post titles
 @app.route('/thoughts/archive/', defaults = {'post_path':'thoughts'})
-@app.route('/snippets/archive/', defaults = {'post_path':'snippets'})
 def view_archive(post_path):
 	# open all the articles as previews
 	try:
@@ -100,7 +94,6 @@ def view_archive(post_path):
 
 # view an RSS feed
 @app.route('/thoughts/rss.xml', defaults = {'post_path':'thoughts'})
-@app.route('/snippets/rss.xml', defaults = {'post_path':'snippets'})
 def view_rss(post_path):
 	# open all the articles as full posts
 	try:
@@ -126,7 +119,6 @@ def view_rss(post_path):
 # view a single post
 @app.route('/post/<int:post_name>/', defaults = {'post_path':'legacy'})
 @app.route('/thoughts/<string:post_name>/', defaults = {'post_path':'thoughts'})
-@app.route('/snippets/<string:post_name>/', defaults = {'post_path':'snippets'})
 def view_single(post_path, post_name):
 	# open the article
 	try:
@@ -147,7 +139,6 @@ def view_single(post_path, post_name):
 @app.route('/links/', defaults = {'post_path':'', 'post_name':'links'})
 @app.route('/projects/', defaults = {'post_path':'', 'post_name':'projects'})
 @app.route('/demos/', defaults = {'post_path':'', 'post_name':'demos'})
-@app.route('/code/', defaults = {'post_path':'', 'post_name':'code'})
 def view_page(post_path, post_name):
 	# open the article
 	try:
