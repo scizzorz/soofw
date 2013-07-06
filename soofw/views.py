@@ -2,7 +2,7 @@ import flask # dependencies
 from soofw import app, post # local
 
 # navigation links
-NAVIGATION =  ['thoughts', 'links', 'projects', 'demos']
+NAVIGATION =  ['thoughts', 'projects', 'demos', 'links']
 
 # view a list of posts
 @app.route('/thoughts/', defaults = {'post_path':'thoughts'})
@@ -139,7 +139,6 @@ def view_single(post_path, post_name):
 @app.route('/links/', defaults = {'post_path':'', 'post_name':'links'})
 @app.route('/projects/', defaults = {'post_path':'', 'post_name':'projects'})
 @app.route('/demos/', defaults = {'post_path':'', 'post_name':'demos'})
-@app.route('/code/', defaults = {'post_path':'', 'post_name':'code'})
 def view_page(post_path, post_name):
 	# open the article
 	try:
