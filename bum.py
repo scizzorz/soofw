@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-import sys
 import soofw
 from bumpy import *
 
@@ -39,6 +38,3 @@ def all():
 def run():
 	'Runs the server.'
 	soofw.app.run(host='0.0.0.0', debug=True)
-
-if __name__ == '__main__':
-	main(sys.argv[1:])
