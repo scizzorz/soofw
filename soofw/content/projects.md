@@ -6,7 +6,7 @@ Hey. Here's stuff I've made for my own fun. This page is *heavily* influenced by
 
 ## Web
 
-### soofw <span class="sub">&#8210; [link](http://soofw.com/) / [github](http://github.com/scizzorz/soofw/)</span>
+### soofw <span class="sub">&#8210; [link](http://soofw.com/) / [github](http://github.com/scizzorz/soofw)</span>
 
 This very web site. Written in [Python](http://www.python.org/). Powered by [Flask](http://flask.pocoo.org/). Stored in plain [Markdown](http://daringfireball.net/projects/markdown/) text files. Served by [nginx](http://www.nginx.org/) and [gunicorn](http://gunicorn.org/). Hosted on a [Linode](http://www.linode.com/) running [Ubuntu](http://www.ubuntu.com/).
 
@@ -20,7 +20,7 @@ A collection of web experiments. Written in JavaScript. Powered by the HTML5 can
 
 I like tinkering with new toys. I heard about HTML5 and its new canvas witchcraft, and since I kinda missed making pretty things with Flash, I leapt right into it. These are the results of all that tinkering. These are mostly just dirty coding done in my free time, so don't expect any high-quality code here. There's also a pretty good chance it won't work if you're using some ancient browser.
 
-### Rainbow Heart <span class="sub">&#8210; [experiments page](http://www.chromeexperiments.com/detail/rainbow-heart/) / [link](http://soofw.com/demos/heart++) / [github](https://github.com/scizzorz/heart/)</span>
+### Rainbow Heart <span class="sub">&#8210; [experiments page](http://www.chromeexperiments.com/detail/rainbow-heart/) / [link](http://soofw.com/demos/heart++) / [github](https://github.com/scizzorz/heart)</span>
 
 A rainbow heart composed of elastic particles. Written in JavaScript. Powered by a handmade particle engine that utilizes the HTML5 canvas element.
 
@@ -28,13 +28,13 @@ This was one of the first canvas demos I did. I just kinda randomly applied for 
 
 ## Command Line
 
-### trk <span class="sub">&#8210; [github](https://github.com/scizzorz/trk/)</span>
+### trk <span class="sub">&#8210; [github](https://github.com/scizzorz/trk)</span>
 
 A to do list manager. Written in [Python](http://www.python.org/).
 
 Google Tasks was really starting to let me down. The lack of an official Android app killed me, and the web interface was just miserable. I figured that since I spent so much time in a terminal anyway, it would be the perfect place to set up a neat little task manager. It also gave me a pretty good chance to work on my Python skills.
 
-### clk <span class="sub">&#8210; [github](https://github.com/scizzorz/clk/)</span>
+### clk <span class="sub">&#8210; [github](https://github.com/scizzorz/clk)</span>
 
 A time tracker. Written in [Python](http://www.python.org/).
 
@@ -42,7 +42,7 @@ Sometimes I like to keep track of how much time I spend on a certain project. Be
 
 ## Widgets
 
-### LCD Clock <span class="sub">&#8210; [github](https://github.com/scizzorz/arduino-remote-lcd/)</span>
+### LCD Clock <span class="sub">&#8210; [github](https://github.com/scizzorz/arduino-remote-lcd)</span>
 
 A physical LCD clock. Written in C++ / [Python](http://www.python.org/). Powered by [Arduino](http://www.arduino.cc/).
 
@@ -51,7 +51,7 @@ Arduinos are frickin' sweet as heck. I bought a few and was just waiting for som
 *Pictures coming eventually.*
 
 
-### Binary LED Clock <span class="sub">&#8210; [github](https://github.com/scizzorz/arduino-binary-clock/)</span>
+### Binary LED Clock <span class="sub">&#8210; [github](https://github.com/scizzorz/arduino-binary-clock)</span>
 
 A physical LED binary clock. Written in C++ / [Python](http://www.python.org/). Powered by [Arduino](http://www.arduino.cc/).
 
