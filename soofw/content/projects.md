@@ -6,7 +6,7 @@ Hey. Here's stuff I've made for my own fun. This page is *heavily* influenced by
 
 ## Web
 
-### soofw <span class="sub">&#8210; [link](http://soofw.com/) / [github](http://github.com/scizzorz/soofw/)</span>
+### soofw <span class="sub">&#8210; [link](http://soofw.com/) / [github](http://github.com/scizzorz/soofw)</span>
 
 This very web site. Written in [Python](http://www.python.org/). Powered by [Flask](http://flask.pocoo.org/). Stored in plain [Markdown](http://daringfireball.net/projects/markdown/) text files. Served by [nginx](http://www.nginx.org/) and [gunicorn](http://gunicorn.org/). Hosted on a [Linode](http://www.linode.com/) running [Ubuntu](http://www.ubuntu.com/).
 
@@ -20,7 +20,7 @@ A collection of web experiments. Written in JavaScript. Powered by the HTML5 can
 
 I like tinkering with new toys. I heard about HTML5 and its new canvas witchcraft, and since I kinda missed making pretty things with Flash, I leapt right into it. These are the results of all that tinkering. These are mostly just dirty coding done in my free time, so don't expect any high-quality code here. There's also a pretty good chance it won't work if you're using some ancient browser.
 
-### Rainbow Heart <span class="sub">&#8210; [experiments page](http://www.chromeexperiments.com/detail/rainbow-heart/) / [link](http://soofw.com/demos/heart++) / [github](https://github.com/scizzorz/heart/)</span>
+### Rainbow Heart <span class="sub">&#8210; [experiments page](http://www.chromeexperiments.com/detail/rainbow-heart/) / [link](http://soofw.com/demos/heart++) / [github](https://github.com/scizzorz/heart)</span>
 
 A rainbow heart composed of elastic particles. Written in JavaScript. Powered by a handmade particle engine that utilizes the HTML5 canvas element.
 
@@ -28,13 +28,21 @@ This was one of the first canvas demos I did. I just kinda randomly applied for 
 
 ## Command Line
 
-### trk <span class="sub">&#8210; [github](https://github.com/scizzorz/trk/)</span>
+### trk <span class="sub">&#8210; [github](https://github.com/scizzorz/trk)</span>
 
 A to do list manager. Written in [Python](http://www.python.org/).
 
-Google Tasks was really starting to let me down. The lack of an official Android app killed me, and the web interface was just miserable. I figured that since I spent so much time in a terminal anyway, it would be the perfect place to set up a neat little task manager. It also gave me a pretty good chance to work on my Python skills.
+Google Tasks was really starting to let me down. The lack of an official Android app killed me, and the web interface was just miserable. I figured that since I spent so much time in a terminal anyway, it would be the perfect place to set up a neat little task manager. It also gave me a pretty good chance to work on my Python skills. As one of my most actively used and developed projects, I've tried to polish `trk` as much as possible. Since its inception, I've rewritten it using another project of mine, `bumpy`, in order to be more flexible and powerful.
 
-### clk <span class="sub">&#8210; [github](https://github.com/scizzorz/clk/)</span>
+### bumpy <span class="sub">&#8210; [github](https://github.com/scizzorz/bumpy)</span>
+
+A library for building small projects, managing repetitive tasks, and CLI Python tools. Written in [Python](http://www.python.org/).
+
+After learning about the wonders of Python, Flask, and SCSS for web development, I started using `make` to manage my repetitive tasks like compiling SCSS, launching a dev server, and generating static pages. Using `make` to call Python scripts felt a little... dirty, so I set about finding a way to call Python scripts from Python. Eventually I stumbled upon [Pynt](https://github.com/rags/pynt) and was pretty happy with it, until I tried it and started experiencing a weird bug when launching a Flask dev server. I got frustrated and started writing my own Python build system with heavy influence from Pynt. After getting it to a usable state and letting it launch a Flask dev server, I got the same bug and decided it was an issue with my Flask set ups or Flask itself, but decided I would continue developing `bumpy` anyway.
+
+Eventually, I noticed the command line argument parsing I was using with `bumpy` could be pretty easily suited to making CLI Python tools, and immediately jumped back to `trk` and started rewriting it using `bumpy` instead, with a significant improvement in usability.
+
+### clk <span class="sub">&#8210; [github](https://github.com/scizzorz/clk)</span>
 
 A time tracker. Written in [Python](http://www.python.org/).
 
@@ -42,7 +50,7 @@ Sometimes I like to keep track of how much time I spend on a certain project. Be
 
 ## Widgets
 
-### LCD Clock <span class="sub">&#8210; [github](https://github.com/scizzorz/arduino-remote-lcd/)</span>
+### LCD Clock <span class="sub">&#8210; [github](https://github.com/scizzorz/arduino-remote-lcd)</span>
 
 A physical LCD clock. Written in C++ / [Python](http://www.python.org/). Powered by [Arduino](http://www.arduino.cc/).
 
@@ -51,7 +59,7 @@ Arduinos are frickin' sweet as heck. I bought a few and was just waiting for som
 *Pictures coming eventually.*
 
 
-### Binary LED Clock <span class="sub">&#8210; [github](https://github.com/scizzorz/arduino-binary-clock/)</span>
+### Binary LED Clock <span class="sub">&#8210; [github](https://github.com/scizzorz/arduino-binary-clock)</span>
 
 A physical LED binary clock. Written in C++ / [Python](http://www.python.org/). Powered by [Arduino](http://www.arduino.cc/).
 
