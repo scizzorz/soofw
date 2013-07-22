@@ -32,7 +32,15 @@ This was one of the first canvas demos I did. I just kinda randomly applied for 
 
 A to do list manager. Written in [Python](http://www.python.org/).
 
-Google Tasks was really starting to let me down. The lack of an official Android app killed me, and the web interface was just miserable. I figured that since I spent so much time in a terminal anyway, it would be the perfect place to set up a neat little task manager. It also gave me a pretty good chance to work on my Python skills.
+Google Tasks was really starting to let me down. The lack of an official Android app killed me, and the web interface was just miserable. I figured that since I spent so much time in a terminal anyway, it would be the perfect place to set up a neat little task manager. It also gave me a pretty good chance to work on my Python skills. As one of my most actively used and developed projects, I've tried to polish `trk` as much as possible. Since its inception, I've rewritten it using another project of mine, `bumpy`, in order to be more flexible and powerful.
+
+### bumpy <span class="sub">&#8210; [github](https://github.com/scizzorz/bumpy)</span>
+
+A library for building small projects, managing repetitive tasks, and CLI Python tools. Written in [Python](http://www.python.org/).
+
+After learning about the wonders of Python, Flask, and SCSS for web development, I started using `make` to manage my repetitive tasks like compiling SCSS, launching a dev server, and generating static pages. Using `make` to call Python scripts felt a little... dirty, so I set about finding a way to call Python scripts from Python. Eventually I stumbled upon [Pynt](https://github.com/rags/pynt) and was pretty happy with it, until I tried it and started experiencing a weird bug when launching a Flask dev server. I got frustrated and started writing my own Python build system with heavy influence from Pynt. After getting it to a usable state and letting it launch a Flask dev server, I got the same bug and decided it was an issue with my Flask set ups or Flask itself, but decided I would continue developing `bumpy` anyway.
+
+Eventually, I noticed the command line argument parsing I was using with `bumpy` could be pretty easily suited to making CLI Python tools, and immediately jumped back to `trk` and started rewriting it using `bumpy` instead, with a significant improvement in usability.
 
 ### clk <span class="sub">&#8210; [github](https://github.com/scizzorz/clk)</span>
 
