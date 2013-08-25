@@ -41,20 +41,20 @@ $fontsize = 10pt;
 // Roboto
 @font-face {
 	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
 	src: url(/static/roboto.ttf);
-	font-weight: normal;
-	font-style: normal;
 }
 @font-face {
 	font-family: Roboto;
-	src: url(/static/roboto-bold.ttf);
+	font-style: normal;
 	font-weight: bold;
-	font-style: normal;
+	src: url(/static/roboto-bold.ttf);
 }
 @font-face {
 	font-family: Roboto;
-	src: url(/static/roboto-italic.ttf);
-	font-weight: normal;
 	font-style: italic;
+	font-weight: normal;
+	src: url(/static/roboto-italic.ttf);
 }
 

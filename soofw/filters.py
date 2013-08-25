@@ -107,8 +107,6 @@ class BlogConverter(routing.BaseConverter):
 	def to_url(self, value):
 		return value
 
-app.url_map.converters['blog'] = BlogConverter
-
 # only accept certain paths for page-style areas
 class PageConverter(routing.BaseConverter):
 	def __init__(self, map):
@@ -124,4 +122,5 @@ class PageConverter(routing.BaseConverter):
 	def to_url(self, value):
 		return value
 
+app.url_map.converters['blog'] = BlogConverter
 app.url_map.converters['page'] = PageConverter
