@@ -48,6 +48,14 @@ A time tracker. Written in [Python](http://www.python.org/).
 
 Sometimes I like to keep track of how much time I spend on a certain project. Because most of my work is done through a terminal, it made sense for me to write a time tracker that I could use from that environment.
 
+Largely unused and inactive right now.
+
+### multigit <span class="sub">&#8210; [github](https://github.com/scizzorz/multigit)</span>
+
+A tool for checking up on multiple local git repos. Written in bash.
+
+Frequently, I find myself working on several different projects in quick succession and easily lose track of which projects are uncommitted, unpushed, need to be fetched/merged, etc., so I created `multigit` to easily execute a command across multiple Git repos. For example, I can simply type `multigit status -s` and get a quick glimpse of each repo's status, or I can type `multigit pull` to automatically fetch and merge every repo that I'm tracking.
+
 ## Android Apps
 
 ### trk for Android <span class="sub">&#8210; [github](https://github.com/scizzorz/trk-android)</span>
