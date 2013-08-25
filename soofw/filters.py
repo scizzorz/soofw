@@ -1,4 +1,5 @@
 import time # python
+from werkzeug import routing
 from soofw import app # local
 
 # format a date for web
@@ -91,3 +92,36 @@ def format_date_rss(article):
 	time_struct = time.localtime(article.timestamp)
 	return time.strftime('%a, %d %B %Y %H:%M:%S %Z', time_struct)
 
+# only accept certain paths for blog-style areas
+class BlogConverter(routing.BaseConverter):
+	def __init__(self, map):
+		super(BlogConverter, self).__init__(map)
+		self.regex = r'\w+'
+
+	def to_python(self, value):
+		if value in ('thoughts',):
+			return value
+
+		raise routing.ValidationError()
+
+	def to_url(self, value):
+		return value
+
+app.url_map.converters['blog'] = BlogConverter
+
+# only accept certain paths for page-style areas
+class PageConverter(routing.BaseConverter):
+	def __init__(self, map):
+		super(PageConverter, self).__init__(map)
+		self.regex = r'\w+'
+
+	def to_python(self, value):
+		if value in ('links', 'projects', 'demos'):
+			return value
+
+		raise routing.ValidationError()
+
+	def to_url(self, value):
+		return value
+
+app.url_map.converters['page'] = PageConverter

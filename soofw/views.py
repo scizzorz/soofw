@@ -1,15 +1,15 @@
 import flask # dependencies
 from soofw import app, post # local
 
-# navigation links
+POSTS_PER_PAGE = 6
 NAVIGATION =  ['thoughts', 'projects', 'demos', 'links']
 
 # view a list of posts
-@app.route('/thoughts/', defaults = {'post_path':'thoughts'})
-@app.route('/thoughts/<int:page>/', defaults = {'post_path':'thoughts'})
-@app.route('/thoughts/tag/<string:tag>/', defaults = {'post_path':'thoughts'})
-@app.route('/thoughts/tag/<string:tag>/<int:page>/', defaults = {'post_path':'thoughts'})
-def view_list(post_path, tag = None, page = 1, posts_per_page = 6):
+@app.route('/<blog:post_path>/')
+@app.route('/<blog:post_path>/<int:page>/')
+@app.route('/<blog:post_path>/tag/<tag>/')
+@app.route('/<blog:post_path>/tag/<tag>/<int:page>/')
+def view_list(post_path, tag = None, page = 1):
 	# open all the articles as previews
 	try:
 		articles = post.get_posts(post_path, mode = 'preview')
@@ -34,24 +34,22 @@ def view_list(post_path, tag = None, page = 1, posts_per_page = 6):
 	page -= 1
 
 	# don't go past the page limit!
-	if posts_per_page * page >= len(articles) or page < 0:
+	if POSTS_PER_PAGE * page >= len(articles) or page < 0:
 		return flask.redirect('/'+post_path)
 
 	# figure out the number of pages and the min/max of our current page
-	pages = len(articles) / posts_per_page + 1
-	min_post = posts_per_page * page
-	max_post = min(min_post + posts_per_page, len(articles))
+	pages = len(articles) / POSTS_PER_PAGE + 1
+	min_post = POSTS_PER_PAGE * page
+	max_post = min(min_post + POSTS_PER_PAGE, len(articles))
 
-	# set the page title and navkey based on the current page
+	# set the navkey based on the current page
 	if page == 0:
-		title = post_path
 		navkey = post_path
 	else:
-		title = '%s (%d)' % (post_path, page + 1)
 		navkey = None
 
 	return flask.render_template('main-list.html',
-			title = title,
+			title = post_path,
 			articles = articles[min_post:max_post],
 			pages = pages,
 			page = page,
@@ -62,7 +60,7 @@ def view_list(post_path, tag = None, page = 1, posts_per_page = 6):
 			navigation = NAVIGATION)
 
 # view a tag-sorted list of post titles
-@app.route('/thoughts/archive/', defaults = {'post_path':'thoughts'})
+@app.route('/<blog:post_path>/archive/')
 def view_archive(post_path):
 	# open all the articles as previews
 	try:
@@ -93,7 +91,7 @@ def view_archive(post_path):
 			navigation = NAVIGATION)
 
 # view an RSS feed
-@app.route('/thoughts/rss.xml', defaults = {'post_path':'thoughts'})
+@app.route('/<blog:post_path>/rss.xml')
 def view_rss(post_path):
 	# open all the articles as full posts
 	try:
@@ -118,7 +116,7 @@ def view_rss(post_path):
 
 # view a single post
 @app.route('/post/<int:post_name>/', defaults = {'post_path':'legacy'})
-@app.route('/thoughts/<string:post_name>/', defaults = {'post_path':'thoughts'})
+@app.route('/<blog:post_path>/<post_name>/')
 def view_single(post_path, post_name):
 	# open the article
 	try:
@@ -135,11 +133,9 @@ def view_single(post_path, post_name):
 			navigation = NAVIGATION)
 
 # view a page
-@app.route('/', defaults = {'post_path':'', 'post_name':'home'})
-@app.route('/links/', defaults = {'post_path':'', 'post_name':'links'})
-@app.route('/projects/', defaults = {'post_path':'', 'post_name':'projects'})
-@app.route('/demos/', defaults = {'post_path':'', 'post_name':'demos'})
-def view_page(post_path, post_name):
+@app.route('/', defaults = {'post_name':'home'})
+@app.route('/<page:post_name>/')
+def view_page(post_name, post_path = ''):
 	# open the article
 	try:
 		article = post.get_post(post_path, post_name+'.md', mode = 'full')
@@ -157,7 +153,7 @@ def legacy_paging(page):
 	return flask.redirect('/thoughts/%d/' % page, 301)
 
 # old post URI
-@app.route('/post/<string:post_id>/')
+@app.route('/post/<post_id>/')
 def legacy_post(post_id):
 	return flask.redirect('/thoughts/%s/' % post_id, 301)
 
