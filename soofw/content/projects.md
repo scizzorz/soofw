@@ -32,7 +32,7 @@ This was one of the first canvas demos I did. I just kinda randomly applied for 
 
 A to do list manager. Written in [Python](http://www.python.org/).
 
-Google Tasks was really starting to let me down. The lack of an official Android app killed me, and the web interface was just miserable. I figured that since I spent so much time in a terminal anyway, it would be the perfect place to set up a neat little task manager. It also gave me a pretty good chance to work on my Python skills. As one of my most actively used and developed projects, I've tried to polish `trk` as much as possible. Since its inception, I've rewritten it using another project of mine, `bumpy`, in order to be more flexible and powerful.
+Google Tasks was really starting to let me down. The lack of an official Android app killed me, and the web interface was just miserable. I figured that since I spent so much time in a terminal anyway, it would be the perfect place to set up a neat little task manager. It also gave me a pretty good chance to work on my Python skills. As one of my most actively used and developed projects, I've tried to polish `trk` as much as possible. Since its inception, I've rewritten it using another project of mine, `bumpy`, in order to be more flexible and powerful, although the rewrite is still under development.
 
 ### bumpy <span class="sub">&#8210; [github](https://github.com/scizzorz/bumpy)</span>
 
@@ -47,6 +47,14 @@ Eventually, I noticed the command line argument parsing I was using with `bumpy`
 A time tracker. Written in [Python](http://www.python.org/).
 
 Sometimes I like to keep track of how much time I spend on a certain project. Because most of my work is done through a terminal, it made sense for me to write a time tracker that I could use from that environment.
+
+## Android Apps
+
+### trk for Android <span class="sub">&#8210; [github](https://github.com/scizzorz/trk-android)</span>
+
+A to do list manager. Written in [Java](http://www.java.com/) with the [Android SDK](http://developer.android.com/index.html).
+
+Even though I spend a lot of my time in a terminal, there's plenty of situations where it's difficult or impossible for me to open a terminal and view my `trk` list. To remedy this, I've started developing an Android app using the same standards and specification that the command-line version of `trk` uses: a text file that contains a list of tasks and uses tags and patterns to organize and manage a to do list. Still under active development.
 
 ## Widgets
 
