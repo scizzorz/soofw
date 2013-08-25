@@ -20,7 +20,7 @@ class PostNotFoundError(Exception):
 		Exception.__init__(self)
 
 	def __str__(self):
-		return 'Unable to open post "%s".' % self._path
+		return 'Unable to open post "{}".'.format(self._path)
 
 # used to load and process a post
 class Post:

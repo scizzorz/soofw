@@ -107,10 +107,10 @@ def view_rss(post_path):
 
 	# we need to add a text/xml header, so we need a new response object
 	response = flask.make_response(flask.render_template('main-rss.html',
-		title = 'soofw / %s' % post_path,
+		title = 'soofw / {}'.format(post_path),
 		articles = articles[:max_post],
 		link = 'http://soofw.com/' + post_path,
-		desc = "A collection of my %s" % post_path))
+		desc = "A collection of my {}".format(post_path)))
 	response.headers['Content-Type'] = 'text/xml'
 	return response
 
@@ -150,12 +150,12 @@ def view_page(post_name, post_path = ''):
 # old paging URI
 @app.route('/<int:page>/')
 def legacy_paging(page):
-	return flask.redirect('/thoughts/%d/' % page, 301)
+	return flask.redirect('/thoughts/{}/'.format(page), 301)
 
 # old post URI
 @app.route('/post/<post_id>/')
 def legacy_post(post_id):
-	return flask.redirect('/thoughts/%s/' % post_id, 301)
+	return flask.redirect('/thoughts/{}/'.format(post_id), 301)
 
 # error handling, derp
 @app.errorhandler(400)
@@ -167,7 +167,7 @@ def view_error(error):
 	# try displaying it like an HTTPException
 	try:
 		return flask.render_template('error.html',
-				error = '%d Error' % error.code,
+				error = '{} Error'.format(error.code),
 				desc = error.description,
 				navigation = NAVIGATION), error.code
 

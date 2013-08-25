@@ -26,7 +26,7 @@ def get_add_id(stack):
 		i = prettify(clean_text)
 
 		stack.append((level, i, clean_text))
-		return '<h%s id="%s">%s</h%s>' % (level, i, text, level)
+		return '<h{} id="{}">{}</h{}>'.format(level, i, text, level)
 	return add_id
 
 def toc(html, nonum = False):
@@ -81,7 +81,7 @@ def toc(html, nonum = False):
 			contents += '</li>\n'
 
 		# open a new <li> with the link
-		contents += '<li><a href="#%s">%s</a>' % (link[1], link[2])
+		contents += '<li><a href="#{}">{}</a>'.format(link[1], link[2])
 
 		# update the new header depth
 		header_depth = level
