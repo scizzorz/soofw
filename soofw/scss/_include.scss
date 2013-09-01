@@ -6,7 +6,7 @@ $background = hsl(0, 0%, 99%);
 $borders    = hsl(0, 0%, 75%);
 
 $accent     = hsl(210, 100%, 50%);
-$hover      = hsl(210, 100%, 70%);
+$hover      = hsl(210, 100%, 30%);
 
 $fontsize = 10pt;
 
@@ -58,3 +58,37 @@ $fontsize = 10pt;
 	src: url(/static/roboto-italic.ttf);
 }
 
+// extra colors
+.house {color: hsl(244, 97%, 72%)}
+.minotaur {color: hsl(0, 100%, 50%)}
+
+.red {color: hsl(0, 100%, 75%)}
+.orange {color: hsl(30, 100%, 75%)}
+.yellow {color: hsl(60, 100%, 75%)}
+.green {color: hsl(120, 100%, 75%)}
+.blue {color: hsl(210, 100%, 75%)}
+.purple {color: hsl(270, 100%, 75%)}
+
+.strike {text-decoration: line-through}
+
+// shell palette
+.shelldefault {color: #D9D9D9}
+.shell0 {color: #2E3338}
+.shell1 {color: #454C54}
+.shell2 {color: #5C6670}
+.shell3 {color: #737F8C}
+
+.shell4 {color: #8F99A3}
+.shell5 {color: #ABB3BA}
+.shell6 {color: #C7CCD1}
+.shell7 {color: #E3E6E8}
+
+.shell8, .shellred {color: #FF4D6A}
+.shell9, .shellorange {color: #FFA64D}
+.shell10, .shellyellow {color: #E1FF4D}
+.shell11, .shellgreen {color: #6AFF4D}
+
+.shell12, .shellseafoam {color: #4DFFA6}
+.shell13, .shellcyan {color: #4DE1FF}
+.shell14, .shellblue {color: #4DA6FF}
+.shell15, .shellpurple {color: #A64DFF}
