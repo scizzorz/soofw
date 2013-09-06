@@ -34,7 +34,7 @@ A to do list manager. Written in [Python](http://www.python.org/).
 
 Google Tasks was really starting to let me down. The lack of an official Android app killed me, and the web interface was just miserable. I figured that since I spent so much time in a terminal anyway, it would be the perfect place to set up a neat little task manager. It also gave me a pretty good chance to work on my Python skills. As one of my most actively used and developed projects, I've tried to polish `trk` as much as possible. Since its inception, I've rewritten it using another project of mine, `bumpy`, in order to be more flexible and powerful, although the rewrite is still under development.
 
-### bumpy <span class="sub">&#8210; [github](https://github.com/scizzorz/bumpy)</span>
+### bumpy <span class="sub">&#8210; [github](https://github.com/scizzorz/bumpy), [pypi](https://pypi.python.org/pypi/bumpy)</span>
 
 A library for building small projects, managing repetitive tasks, and CLI Python tools. Written in [Python](http://www.python.org/).
 
