@@ -73,7 +73,7 @@ class Post:
 					metamode = self._mode
 
 			# otherwise, just add the line to the source
-			elif metamode == 'preview' or metamode == 'full':
+			if metamode == 'preview' or metamode == 'full':
 				is_header = RE_HEADER.match(line)
 				is_rule = RE_RULE.match(line)
 
