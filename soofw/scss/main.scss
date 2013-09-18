@@ -44,7 +44,8 @@ section {
 	}
 	h1 {
 		font-size: 1.3em;
-		text-transform: uppercase;
+		text-transform: lowercase;
+		padding: 0 0 0 0.23em;
 		a {
 			color: $accent;
 			text-decoration: none;
@@ -62,19 +63,21 @@ section {
 	}
 	h2 {
 		font-size: 1.2em;
-		padding: 0 0 0.3em 0;
+		padding: 0 0 0.25em 0.25em;
 		border-bottom: 1px solid $borders;
-		margin: 2em 0 0.3em 0;
-		text-transform: uppercase;
+		margin: 2em 0 0.25em 0;
+		text-transform: lowercase;
 	}
 	h3 {
 		font-size: 1.1em;
+		padding: 0 0 0 0.27em;
 		margin: 1em 0 0 0;
 		text-transform: none;
 		display: inline-block;
 	}
 
 	.tags {
+		padding: 0 0 0 0.3em;
 		color: $shade;
 		font-size: 1em;
 		text-transform: lowercase;
@@ -83,7 +86,7 @@ section {
 
 	p {
 		margin: 1em 0;
-		padding: 0 1em;
+		padding: 0 0.3em;
 	}
 
 	iframe, img {
