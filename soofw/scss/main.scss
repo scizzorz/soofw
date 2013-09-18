@@ -179,56 +179,6 @@ section {
 		font-family: Arial;
 	}
 }
-#toc {
-	color: $shade;
-	display: block;
-	line-height: 1.5em;
-	width: 15em;
-	right: -20em;
-	top: 0em;
-	position: absolute;
-	margin: 0;
-	padding: 1em 1em 1em 3em;
-	list-style-type: upper-roman;
-
-	li {
-		font-weight: bold;
-		li {
-			font-weight: normal;
-		}
-	}
-	li#top, li#archive {
-		font-style: italic;
-		list-style: none;
-		border: none;
-		margin-top: 0.3em;
-		padding-top: 0.3em;
-	}
-	// don't add padding above the #top if it's preceded by an #archive
-	li#archive + li#top {
-		margin-top: 0;
-		padding-top: 0;
-	}
-
-	ol {
-		padding: 0 0 0 1.5em;
-		list-style-type: lower-alpha;
-	}
-	code {
-		border: none;
-		padding: 0;
-		margin: 0;
-		background: none;
-		font-family: inherit;
-	}
-}
-.nonum {
-	// why the hell do these need !important?
-	// shouldn't they override the previous stuff? guh.
-	list-style-type: none !important;
-	padding: 1em !important;
-}
-
 
 // main body container
 div#container {
