@@ -15,20 +15,20 @@ def view_list(post_path, tag = None, page = 1):
 		articles = post.get_posts(post_path, mode = 'preview')
 	except post.PostNotFoundError:
 		flask.abort(404)
-	else:
-		# make them reverse chronological order
-		articles.reverse()
 
-		tags = []
-		for article in articles:
-			if 'tags' in article:
-				for t in article['tags']:
-					if t not in tags:
-						tags.append(t)
+	# make them reverse chronological order
+	articles.reverse()
 
-		# grab the tagged articles if we need to
-		if tag:
-			articles = [article for article in articles if ('tags' in article and tag in article['tags'])]
+	tags = []
+	for article in articles:
+		if 'tags' in article:
+			for t in article['tags']:
+				if t not in tags:
+					tags.append(t)
+
+	# grab the tagged articles if we need to
+	if tag:
+		articles = [article for article in articles if ('tags' in article and tag in article['tags'])]
 
 	# drop the page by one to dehumanize it
 	page -= 1
@@ -49,15 +49,15 @@ def view_list(post_path, tag = None, page = 1):
 		navkey = None
 
 	return flask.render_template('main-list.html',
-			title = post_path,
-			articles = articles[min_post:max_post],
-			pages = pages,
-			page = page,
-			tag = tag,
-			tags = sorted(tags),
-			path = post_path,
-			navkey = navkey,
-			navigation = NAVIGATION)
+		title = post_path,
+		articles = articles[min_post:max_post],
+		pages = pages,
+		page = page,
+		tag = tag,
+		tags = sorted(tags),
+		path = post_path,
+		navkey = navkey,
+		navigation = NAVIGATION)
 
 # view a tag-sorted list of post titles
 @app.route('/<blog:post_path>/archive/')
@@ -67,28 +67,28 @@ def view_archive(post_path):
 		articles = post.get_posts(post_path, mode = 'preview')
 	except post.PostNotFoundError:
 		flask.abort(404)
-	else:
-		# make them reverse chronological order
-		articles.reverse()
 
-		bundle = {}
-		tags = []
-		for article in articles:
-			if 'tags' in article:
-				for tag in article['tags']:
-					if tag not in tags:
-						tags.append(tag)
+	# make them reverse chronological order
+	articles.reverse()
 
-					if tag not in bundle:
-						bundle[tag] = []
+	bundle = {}
+	tags = []
+	for article in articles:
+		if 'tags' in article:
+			for tag in article['tags']:
+				if tag not in tags:
+					tags.append(tag)
 
-					bundle[tag].append(article)
+				if tag not in bundle:
+					bundle[tag] = []
+
+				bundle[tag].append(article)
 
 	return flask.render_template('main-archive.html',
-			bundle = bundle,
-			tags = sorted(tags),
-			path = post_path,
-			navigation = NAVIGATION)
+		bundle = bundle,
+		tags = sorted(tags),
+		path = post_path,
+		navigation = NAVIGATION)
 
 # view an RSS feed
 @app.route('/<blog:post_path>/rss.xml')
@@ -98,9 +98,9 @@ def view_rss(post_path):
 		articles = post.get_posts(post_path, mode = 'full')
 	except post.PostNotFoundError:
 		flask.abort(404)
-	else:
-		# make them reverse chronological order
-		articles.reverse()
+
+	# make them reverse chronological order
+	articles.reverse()
 
 	# get at most 10 articles
 	max_post = min(10, len(articles))
@@ -129,8 +129,8 @@ def view_single(post_path, post_name):
 		return flask.redirect(article['redirect'], 301)
 
 	return flask.render_template('main-single.html',
-			article = article,
-			navigation = NAVIGATION)
+		article = article,
+		navigation = NAVIGATION)
 
 # view a page
 @app.route('/', defaults = {'post_name':'home'})
@@ -143,9 +143,9 @@ def view_page(post_name, post_path = ''):
 		flask.abort(404)
 
 	return flask.render_template('main-page.html',
-			article = article,
-			navkey = article['navkey'],
-			navigation = NAVIGATION)
+		article = article,
+		navkey = article['navkey'],
+		navigation = NAVIGATION)
 
 # old paging URI
 @app.route('/<int:page>/')
@@ -167,13 +167,13 @@ def view_error(error):
 	# try displaying it like an HTTPException
 	try:
 		return flask.render_template('error.html',
-				error = '{} Error'.format(error.code),
-				desc = error.description,
-				navigation = NAVIGATION), error.code
+			error = '{} Error'.format(error.code),
+			desc = error.description,
+			navigation = NAVIGATION), error.code
 
 	# guess not.
 	except:
 		return flask.render_template('error.html',
-				error = 'Oh noes',
-				desc = 'No description available.',
-				navigation = NAVIGATION)
+			error = 'Oh noes',
+			desc = 'No description available.',
+			navigation = NAVIGATION)
