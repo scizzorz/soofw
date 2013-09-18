@@ -23,13 +23,13 @@
 			<header>
 				<nav>
 					<ul id="nav" class="shaded-links">
-						{% if navkey == 'home' %}
+						{% if g.navkey == 'home' %}
 							<li class="logo">soofw</li>
 						{% else %}
 							<li class="logo"><a href="/">soofw</a></li>
 						{% endif %}
-						{% for item in navigation -%}
-							{% if item == navkey %}
+						{% for item in config['NAVIGATION'] -%}
+							{% if item == g.navkey %}
 								<li class="nav-{{ item }}">{{ item }}</li>
 							{% else %}
 								<li class="nav-{{ item }}"><a href="/{{ item }}/">{{ item }}</a></li>
