@@ -103,13 +103,13 @@ class Post:
 	def __ne__(self, other):
 		return self.timestamp != other.timestamp
 	def __le__(self, other):
-		return self.timestamp < other.timestamp
-	def __lt__(self, other):
 		return self.timestamp <= other.timestamp
+	def __lt__(self, other):
+		return self.timestamp < other.timestamp
 	def __ge__(self, other):
-		return self.timestamp > other.timestamp
-	def __gt__(self, other):
 		return self.timestamp >= other.timestamp
+	def __gt__(self, other):
+		return self.timestamp > other.timestamp
 
 	# dict features
 	def __len__(self):
