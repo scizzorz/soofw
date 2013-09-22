@@ -1,23 +1,23 @@
 import bumpy, soofw
 
-@bumpy.task
+@bumpy.generates('*.pyc', 'soofw/*.pyc')
 def clean():
 	'Removes all generated files.'
-	bumpy.shell('rm -rf *.pyc soofw/*.pyc')
 	bumpy.clean()
 
+@bumpy.method
 @bumpy.requires('soofw/scss/main.scss', 'soofw/scss/_include.scss')
 @bumpy.generates('soofw/static/main.css')
-def css():
+def css(self):
 	'Compiles the SCSS into CSS.'
 
 	# only build CSS if the SCSS is newer
-	if bumpy.age('soofw/scss/main.scss', 'soofw/scss/_include.scss') < bumpy.age('soofw/static/main.css'):
+	if bumpy.age(*self.requirements) < bumpy.age(self.generates[0]):
 		import scss
 		_scss = scss.Scss({}, {'compress': False, 'debug_info': False})
 
-		main_file = open('soofw/static/main.css', 'w')
-		main_file.write(_scss.compile(scss_file = 'soofw/scss/main.scss'))
+		main_file = open(self.generates[0], 'w')
+		main_file.write(_scss.compile(scss_file=self.requirements[0]))
 
 @bumpy.generates('soofw/content/links.md')
 def links():
