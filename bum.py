@@ -22,7 +22,7 @@ def css(self):
 		main_file = open(self.generates, 'w')
 		main_file.write(_scss.compile(scss_file=self.file_requirements[0]))
 
-@b.generates('soofw/content/links.md')
+@b.generates('soofw/content/links.yml')
 def links():
 	'''Generate the "links" page.'''
 
