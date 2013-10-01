@@ -5,6 +5,8 @@ from soofw import app # local
 # format a date for web
 @app.template_filter('date')
 def format_date(article):
+	return 'FIXME'
+
 	# if there's no timestamp, just return blank...
 	if article.timestamp == 0:
 		return ''
@@ -58,6 +60,8 @@ def format_date(article):
 
 @app.template_filter('date_prep')
 def format_date_prep(article):
+	return 'FIXME'
+
 	# if there's no timestamp, just return blank...
 	if article.timestamp == 0:
 		return ''
@@ -89,6 +93,7 @@ def format_date_short(article):
 # format the date for the RSS feed
 @app.template_filter('date_rss')
 def format_date_rss(article):
+	return 'FIXME'
 	time_struct = time.localtime(article.timestamp)
 	return time.strftime('%a, %d %B %Y %H:%M:%S %Z', time_struct)
 

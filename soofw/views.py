@@ -1,5 +1,5 @@
-import flask # dependencies
-from soofw import app, post # local
+import flask, os, yaml
+from soofw import app
 
 POSTS_PER_PAGE = 6
 app.config['NAVIGATION'] = ['thoughts', 'projects', 'demos', 'links']
@@ -10,21 +10,10 @@ app.config['NAVIGATION'] = ['thoughts', 'projects', 'demos', 'links']
 @app.route('/<blog:post_path>/tag/<tag>/')
 @app.route('/<blog:post_path>/tag/<tag>/<int:page>/')
 def view_list(post_path, tag = None, page = 1):
-	# open all the articles as previews
-	try:
-		articles = post.get_posts(post_path, mode = 'preview')
-	except post.PostNotFoundError:
-		flask.abort(404)
+	articles = [yaml.load(open(path)) for path in os.listdir('soofw/content/' + post_path)]
 
 	# make them reverse chronological order
 	articles.reverse()
-
-	tags = []
-	for article in articles:
-		if 'tags' in article:
-			for t in article['tags']:
-				if t not in tags:
-					tags.append(t)
 
 	# grab the tagged articles if we need to
 	if tag:
@@ -53,17 +42,13 @@ def view_list(post_path, tag = None, page = 1):
 		pages = pages,
 		page = page,
 		tag = tag,
-		tags = sorted(tags),
 		path = post_path)
 
 # view a tag-sorted list of post titles
 @app.route('/<blog:post_path>/archive/')
 def view_archive(post_path):
 	# open all the articles as previews
-	try:
-		articles = post.get_posts(post_path, mode = 'preview')
-	except post.PostNotFoundError:
-		flask.abort(404)
+	articles = [yaml.load(open(path)) for path in os.listdir('soofw/content/' + post_path)]
 
 	# make them reverse chronological order
 	articles.reverse()
@@ -90,10 +75,7 @@ def view_archive(post_path):
 @app.route('/<blog:post_path>/rss.xml')
 def view_rss(post_path):
 	# open all the articles as full posts
-	try:
-		articles = post.get_posts(post_path, mode = 'full')
-	except post.PostNotFoundError:
-		flask.abort(404)
+	articles = [yaml.load(open(path)) for path in os.listdir('soofw/content/' + post_path)]
 
 	# make them reverse chronological order
 	articles.reverse()
@@ -115,10 +97,7 @@ def view_rss(post_path):
 @app.route('/<blog:post_path>/<post_name>/')
 def view_single(post_path, post_name):
 	# open the article
-	try:
-		article = post.get_post(post_path, str(post_name)+'.md', mode = 'full')
-	except post.PostNotFoundError:
-		flask.abort(404)
+	article = yaml.load(open('soofw/content/' + post_path + '/' + str(post_name) + '.yml'))
 
 	# if it has a meta redirect, follow it
 	if 'redirect' in article:
@@ -132,10 +111,7 @@ def view_single(post_path, post_name):
 @app.route('/<page:post_name>/')
 def view_page(post_name, post_path = ''):
 	# open the article
-	try:
-		article = post.get_post(post_path, post_name+'.md', mode = 'full')
-	except post.PostNotFoundError:
-		flask.abort(404)
+	article = yaml.load(open('soofw/content/' + post_path + '/' + str(post_name) + '.yml'))
 
 	flask.g.navkey = article['navkey']
 

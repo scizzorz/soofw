@@ -3,3 +3,4 @@ deliciousapi
 flask
 flask-markdown
 pyscss
+pyyaml
