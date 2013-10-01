@@ -1,6 +1,5 @@
 import os, re, time # python
 import markdown2 # dependencies
-from soofw import toc # local
 
 # get the path to the content directory
 APP_ROOT = os.path.dirname(os.path.realpath(__file__))
@@ -92,10 +91,7 @@ class Post:
 
 	# render the markdown (if necessary)
 	def render(self):
-		if self._mode == 'preview' or 'notoc' in self:
-			return markdown2.markdown(self._source)
-		else:
-			return toc.toc(markdown2.markdown(self._source), 'nonum' in self)
+		return markdown2.markdown(self._source);
 
 	# rich sorting
 	def __eq__(self, other):
