@@ -1,5 +1,0 @@
-* title = Snippets!
-* datetime = 3/19/2013 1:12am
-* tags = soofw
-
-Huzzah. A new site feature: [snippets](http://soofw.com/snippets). At the moment, it only contains a few infrequently used chunks of shell scripts used to configure some stuff, but I have high hopes for it. Beyond the addition of snippets, I've also updated some of the code base and I'm slowly working towards a version that's acceptable for open-sourcing. I'm also working on updating the site's URIs, so a lot of [old URIs](http://soofw.com/post/coderbyte-programming-challenges) and [legacy URIs](http://soofw.com/post/104) will now 301 Redirect to the [new URIs](http://soofw.com/thoughts/coderbyte-programming-challenges). <span class="strike">Posts should also have a "view source" link in the top right corner, just in case you want to view an individual post's [Markdown source](http://soofw.com/post/coderbyte-programming-challenges/source).</span>

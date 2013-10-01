@@ -1,6 +1,0 @@
-* title = My command-line to do list
-* datetime = 10/27/2012 3:02pm
-* tags = python git
-* link = https://github.com/scizzorz/trk
-
-In an effort to improve my personal task management / organization and my Python, I've been writing a command-line based to do list. I based it heavily on [todo.txt](http://ginatrapani.github.com/todo.txt-cli/) and Steve Losh's [t](http://stevelosh.com/projects/t/), but with my own little twists and ideas built into it. It's my first real experiment with both Python and git/github, so I'm learning as I go and hopefully making a usable product for people other than myself. You can check out all of the details over at the [github repo](http://github.com/scizzorz/trk) and even fork it or something funny like that.

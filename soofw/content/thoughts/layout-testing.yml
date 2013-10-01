@@ -1,0 +1,10 @@
+title: Layout Testing
+datetime: 2013-02-02 16:13:00
+tags:
+  - soofw
+body: |
+  So, I'm at it again. soofw has a new style. Here's a preview of all the things I plan on using. Up at the top is the standard header level 1 with the post title. Titles with a dotted underline will link to another resource. The date (and its lemniscate) provide a permalink to this article.
+
+  If viewed on the home page, the article will break after this paragraph and ask you to continue reading. If viewed as a single article, nothing special happens after this paragraph. Oh yeah, here's `some inline code style`.
+
+

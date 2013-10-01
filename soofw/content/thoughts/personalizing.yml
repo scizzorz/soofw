@@ -1,0 +1,13 @@
+title: Personalizing
+datetime: 2012-10-19 18:29:00
+tags:
+  - android
+  - linux
+  - me
+body: |
+  One of the biggest reasons I appreciate Linux and Android so much more than their competitors is the absurd level of customization available to me and the relative ease with which I can use it. Almost any feature or idea I can think of has already been implemented by someone else and is readily available for me to download, use, and modify to suit my needs. This is my ideal situation; I love digging into settings and tinkering until things are exactly the way I want. Beyond looking exactly the way I want, making a personalized UX provides me with an incredible boost in productivity. By setting up keyboard shortcuts to quickly perform common tasks such as opening a terminal, tiling my windows, and switching workspaces, I can keep my hands focused on the keyboard without ever having to touch the mouse. Mice are slow, so not having to use it to do tasks makes working go significantly faster.
+
+  For most people, however, being presented with dozens of configuration choices can be daunting, overwhelming, and push them away. Not only can customization deter many users, it can make it downright impossible for others to use your custom setup. I've streamlined my computer, phone, and tablet with shortcuts and gestures that are impossible to figure out without already knowing them. For example, `ctrl+alt+z` launches a run dialog, `ctrl+alt+x` launches a terminal (which is already fairly arcane for most people), and `ctrl+alt+c` launches an interactive JavaScript shell. `super+x` and `super+c` control volume while `super+a/s/d` control media playback. I don't even have window borders, titles, or a task bar enabled; I throw the cursor into a corner to switch windows and use my keyboard to move and align my windows. I have gestures on my phone to open the app drawer, launch specific apps, or toggle settings.
+
+  For those who are unfamiliar with my unique setups (ie everyone that isn't me), all of these decisions seem inefficient and confusing and make the device almost unusable. But if someone were to actually take the time to learn all of my shortcuts, they might start to realize the reasoning behind it all and why I've chosen to set things up that way. Personalizing your own devices is one of the most powerful tools you can use to improve your efficiency in day-to-day tasks.
+

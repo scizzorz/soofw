@@ -1,0 +1,10 @@
+title: Terminals Can Have Colors!
+datetime: 2013-02-09 23:20:00
+tags:
+  - shells
+body: |
+  I love using terminal emulators. I think they're pretty neat, and I think they're pretty powerful too, but I also think they can be pretty hard to use without some moderate customization. Conveniently enough, I love personalizing my gadgets, tools, and programs. I've spent a lot of time in the last two years collecting tiny snippets and adding them to my `.bashrc`, and all of this accumulation has resulted in a rather personal terminal / prompt set up. I'll try to highlight the best features in this post so anyone else can use them.
+
+  Before starting, I would like to point out that this is *my* prompt and is designed to suit *my* needs. You might have different needs, wants, and goals, so this might not be a perfect set up for you, but I'm hoping you'll at least learn something new. I would also like to point out that (almost) all of my Linux dotfiles are available on my [GitHub](http://github.com/scizzorz/dots/) page.
+
+

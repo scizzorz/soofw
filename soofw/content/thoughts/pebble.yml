@@ -1,0 +1,9 @@
+title: Pebble
+datetime: 2013-02-02 12:51:00
+tags:
+  - gadgets
+body: |
+  So I ordered a [Pebble](http://getpebble.com). For those of you who don't know, it's a neat little watch with an e-paper display and Bluetooth connectivity. The basic idea is that you'll have this small device on your wrist that can connect to the your phone and the internet and provide you with a handful of subtle notifications, such as new text messages, phone calls, emails, etc. It can also communicate back to the phone for things like music playback. I chose a Pebble mostly because of the overwhelming amount of hype surrounding it; it reached its $100,000 Kickstarter goal in merely two hours. Plus, it's got a whole array of nice features: sleek design, seven day battery life, water resistance for showering/swimming, high-contrast display, vibrating motor, and accelerometer for gestures. Oh yeah, and it's completely customizable and has an SDK for writing your own apps.
+
+  From what I've gathered, you can write your own custom notifications via [if-this-then-that](http://ifttt.com) without even touching any code. Or if you want more depth, you can write your own apps or watchfaces using their public SDK. Personally, I'm really excited to see what kind of cool things I can make it do and some of the useful apps made by other people. At the moment, I'm just hoping I can get the time + weather watchface displayed in [this picture](http://cdn.shopify.com/s/files/1/0106/1422/t/4/assets/photo-watchfaces-3.jpg?13). I'm also planning on making use of the three buttons to implement some sort of timer/stopwatch app so I can instantly set up timers.
+

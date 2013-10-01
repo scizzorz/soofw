@@ -1,0 +1,7 @@
+title: 'Demos'
+page_title: 'demos'
+navkey: 'demos'
+body: |
+  Here's a whole bunch of demos that I've made at some point fairly recently in my lifetime. Note that a lot of these are just quick and dirty experiments and likely have poorly documented and ugly code, but you might find a few pretty examples in there. Also note that I use <a href="http://google.com/chrome" target="_blank">Google Chrome</a> and, as such, only test in Google Chrome. These are my personal experiments and not my professional endeavors, afterall. If the demo doesn't work in other browsers, <a href="mailto:john@soofw.com">email me</a> and I might try and fix it.
+
+  <span style="text-decoration: line-through">The demos are automatically pulled from an svn repository every six hours so they are susceptible to change without warning, although I try to make a new demo whenever I want to change something radically.</span> No, they aren't. I haven't worked with any demos in ages, so these are all stagnant.

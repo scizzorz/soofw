@@ -1,0 +1,11 @@
+title: Announcing... pyfw
+datetime: 2013-02-24 02:10:00
+tags:
+  - python
+  - soofw
+body: |
+  After about a week's worth of effort, I've finally got a functioning version of soofw based on a Python and [mod_wsgi](http://code.google.com/p/modwsgi/). I wrote my own framework system to get a better understanding of the web environment for Python, but I'm not entirely confident it's the best solution for my needs. Earlier today I finished importing all of the legacy posts to the new system and flipped the switch to transition from PHP to Python.
+
+  Overall, it was an enjoyable experience. It felt pretty satisfying every time I got a piece to click into place. Python made it easy and quick to implement all of the features of the previous version plus some new ones. I wrote the new system with the eventual goal of open-sourcing it on GitHub, but at the moment it's a little... messy. I'd like to spend some time with it clean it up and get a chance to see where it misses the mark. I can already tell that it's a much more powerful and flexible setup than my old PHP, so I'm pretty hopeful.
+
+

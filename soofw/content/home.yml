@@ -1,0 +1,9 @@
+title: 'Welcome!'
+page_title: 'home'
+navkey: 'home'
+body: |
+  Welcome to the wonderful world of soofw. My name is John (aka scizzorz). I'm 20 years old and studying computer science at [Binghamton University](http://binghamton.edu/) in New York. You can email me at <jweachock@gmail.com>.
+
+  This site serves as my code playground and experimental zone. I like playing around with new stuff, so the site is usually under construction. In the meantime, I use it to express my [thoughts](Http://soofw.com/thoughts/) and try to produce useful content for people. In general, I try to post things that *I* would like to read about: tools I'm using, my personalized settings, opinions on things, design decisions, work styles, etc. and the rationale behind all of those things. I find that reading about the experiences of other people has certainly influenced the way I work and helped me to become better at the things I do, so I try to replicate that effect and hope that I help someone else find a new tool or learn something new. I have a section to showcase my [personal projects](http://soofw.com/projects/), because I like to see what others have made as well. There's a small corner dedicated to interesting articles over [here](http://soofw.com/links/), and there's a long list of HTML5 canvas demos over [here](http://soofw.com/demos/).
+
+  I hope you enjoy your visit!

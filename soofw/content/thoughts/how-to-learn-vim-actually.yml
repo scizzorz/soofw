@@ -1,0 +1,8 @@
+title: How to Learn Vim (Actually)
+datetime: 2013-03-16 13:35:00
+tags:
+  - vim
+body: |
+  When you first start learning Vim, it just [sucks](/post/coming-home-to-vim). Everyone (except a few lucky people) goes through the "this is stupid" phase, and a lot of those people just give up on Vim because it's so different. **Don't.** Vim has multitudes of advantages over traditional editors and IDEs; notably, its incredible efficiency and ease of access through remote shells like `ssh`. Since this article is about actually *learning* Vim, however, I'll be carrying on now...
+
+

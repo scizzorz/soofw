@@ -1,0 +1,20 @@
+title: Neat Stuff
+datetime: 2013-05-21 17:18:00
+tags:
+  - python
+  - soofw
+body: |
+  It's almost been two weeks since I open-sourced the web site and I haven't even written a post about it, so... here's a summary of things:
+
+  * **The new home page** is alright. I didn't like the thoughts list being the front page, so I just made a small about page or something.
+  * **Layout, style,  and usability improvements** turned out pretty well, I think. Some notable improvements are the table of contents feature on each page, bigger line spacing, and a wider column. I also added tags/categories again, but I'm still pretty confident that [Google does it better](http://google.com/#q=site:soofw.com+vim).
+  * **Updated [projects](http://soofw.com/projects/) and [demos](http://soofw.com/demos/) pages** seem better as well. I pretty much just reorganized everything and updated the formatting a little bit.
+  * A **[links](http://soofw.com/links/)** page to archive all sorts of interesting articles I find.
+  * An **[archive](http://soofw.com/thoughts/archive/)** page that just lists all of my post headlines by category. Seems pretty alright.
+  * **[Flask](http://flask.pocoo.org/)** is awesome. I transitioned to it from my own framework and I'm blown away by how easy and powerful it was. The development server that comes packaged inside is phenomenal amnd makes development tremendously easy. Switching between web site projects is vastly easier than mucking with all the Apache configuration files.
+  * **[nginx](http://www.nginx.org/)** and **[gunicorn](http://gunicorn.org/)** are awesome as well, and I'm really enjoying them a lot more than with Apache and mod_wsgi. Everything seems much clearer now and I feel like I have a stronger grasp on what's actually happening; whether that's because I've got more experience in general or these are actually easier tools to use is anyone's guess. Probably a combination of both.
+  * **[Linode](http://linode.com/)** is magnitudes better than GoDaddy in terms of VPS hosting. Not only is it cheaper, but the dashboard and management web site is less cluttered and easier to navigate. Everything seems much more transparent, and I have more control over the server itself (eg picking my own distro from any possibility rather than a list of two or three). I subscribed for it a few months ago and haven't looked back. I even got a free upgrade, which is something GoDaddy never did in four years. Overall, the company just seems less scummy as well.
+  * **[Delicious](http://delicious.com/)** is *okay.* It gives me a quick way to bookmark links I enjoy, tag them, and then export them to a page on this site. It's nothing spectacular and I've encountered some small nuisances, but it works most of the time.
+  * **[GitLab](http://gitlab.org/)** is awesome. I'm not using it for this site, but it's definitely a better option than paying for private repositories from GitHub. Honestly, I think it's *better* than GitHub in a lot of areas.
+
+
