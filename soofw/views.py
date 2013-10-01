@@ -3,16 +3,27 @@ from soofw import app
 
 POSTS_PER_PAGE = 6
 app.config['NAVIGATION'] = ['thoughts', 'projects', 'demos', 'links']
+app.config['CONTENT'] = 'soofw/content/'
+
+def grab(path, name):
+	if os.path.splitext(name)[1] == '':
+		name += '.yml'
+
+	temp = yaml.load(open(os.path.join(app.config['CONTENT'], path, name)))
+	temp['path'] = path
+	temp['name'] = name
+	return temp
 
 # view a list of posts
-@app.route('/<blog:post_path>/')
-@app.route('/<blog:post_path>/<int:page>/')
-@app.route('/<blog:post_path>/tag/<tag>/')
-@app.route('/<blog:post_path>/tag/<tag>/<int:page>/')
-def view_list(post_path, tag = None, page = 1):
-	articles = [yaml.load(open(path)) for path in os.listdir('soofw/content/' + post_path)]
+@app.route('/<blog:path>/')
+@app.route('/<blog:path>/<int:page>/')
+@app.route('/<blog:path>/tag/<tag>/')
+@app.route('/<blog:path>/tag/<tag>/<int:page>/')
+def view_list(path, tag = None, page = 1):
+	articles = [grab(path, name) for name in os.listdir('soofw/content/' + path)]
 
 	# make them reverse chronological order
+	# FIXME
 	articles.reverse()
 
 	# grab the tagged articles if we need to
@@ -25,7 +36,7 @@ def view_list(post_path, tag = None, page = 1):
 
 	# don't go past the page limit!
 	if POSTS_PER_PAGE * page >= len(articles) or page < 0:
-		return flask.redirect('/'+post_path)
+		return flask.redirect('/'+path)
 
 	# figure out the number of pages and the min/max of our current page
 	pages = len(articles) / POSTS_PER_PAGE + 1
@@ -34,23 +45,24 @@ def view_list(post_path, tag = None, page = 1):
 
 	# set the navkey based on the current page
 	if not page:
-		flask.g.navkey = post_path
+		flask.g.navkey = path
 
 	return flask.render_template('main-list.html',
-		title = post_path,
+		title = path,
 		articles = articles[min_post:max_post],
 		pages = pages,
 		page = page,
 		tag = tag,
-		path = post_path)
+		path = path)
 
 # view a tag-sorted list of post titles
-@app.route('/<blog:post_path>/archive/')
-def view_archive(post_path):
+@app.route('/<blog:path>/archive/')
+def view_archive(path):
 	# open all the articles as previews
-	articles = [yaml.load(open(path)) for path in os.listdir('soofw/content/' + post_path)]
+	articles = [grab(path, name) for name in os.listdir('soofw/content/' + path)]
 
 	# make them reverse chronological order
+	# FIXME
 	articles.reverse()
 
 	bundle = {}
@@ -69,15 +81,16 @@ def view_archive(post_path):
 	return flask.render_template('main-archive.html',
 		bundle = bundle,
 		tags = sorted(tags),
-		path = post_path)
+		path = path)
 
 # view an RSS feed
-@app.route('/<blog:post_path>/rss.xml')
-def view_rss(post_path):
+@app.route('/<blog:path>/rss.xml')
+def view_rss(path):
 	# open all the articles as full posts
-	articles = [yaml.load(open(path)) for path in os.listdir('soofw/content/' + post_path)]
+	articles = [grab(path, name) for name in os.listdir('soofw/content/' + path)]
 
 	# make them reverse chronological order
+	# FIXME
 	articles.reverse()
 
 	# get at most 10 articles
@@ -85,19 +98,19 @@ def view_rss(post_path):
 
 	# we need to add a text/xml header, so we need a new response object
 	response = flask.make_response(flask.render_template('main-rss.html',
-		title = 'soofw / {}'.format(post_path),
+		title = 'soofw / {}'.format(path),
 		articles = articles[:max_post],
-		link = 'http://soofw.com/' + post_path,
-		desc = "A collection of my {}".format(post_path)))
+		link = 'http://soofw.com/' + path,
+		desc = "A collection of my {}".format(path)))
 	response.headers['Content-Type'] = 'text/xml'
 	return response
 
 # view a single post
-@app.route('/post/<int:post_name>/', defaults = {'post_path':'legacy'})
-@app.route('/<blog:post_path>/<post_name>/')
-def view_single(post_path, post_name):
+@app.route('/post/<int:name>/', defaults = {'path':'legacy'})
+@app.route('/<blog:path>/<name>/')
+def view_single(path, name):
 	# open the article
-	article = yaml.load(open('soofw/content/' + post_path + '/' + str(post_name) + '.yml'))
+	article = grab(path, name)
 
 	# if it has a meta redirect, follow it
 	if 'redirect' in article:
@@ -107,11 +120,11 @@ def view_single(post_path, post_name):
 		article = article)
 
 # view a page
-@app.route('/', defaults = {'post_name':'home'})
-@app.route('/<page:post_name>/')
-def view_page(post_name, post_path = ''):
+@app.route('/', defaults = {'name': 'home'})
+@app.route('/<page:name>/')
+def view_page(name, path = ''):
 	# open the article
-	article = yaml.load(open('soofw/content/' + post_path + '/' + str(post_name) + '.yml'))
+	article = grab(path, name)
 
 	flask.g.navkey = article['navkey']
 

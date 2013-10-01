@@ -83,6 +83,8 @@ def format_date_prep(article):
 
 @app.template_filter('date_short')
 def format_date_short(article):
+	return 'FIXME'
+
 	date_fmt = '%b %Y'
 
 	time_struct = time.localtime(article.timestamp)
