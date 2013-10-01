@@ -1,37 +1,43 @@
-import bumpy, soofw
+import sys, bumpy as b
+if '.' not in sys.path: sys.path.append('.')
+import soofw
 
-@bumpy.generates('*.pyc', 'soofw/*.pyc')
+@b.generates('*.pyc **/*.pyc')
 def clean():
-	'Removes all generated files.'
-	bumpy.clean()
+	'''Remove all generated files.'''
 
-@bumpy.method
-@bumpy.requires('soofw/scss/main.scss', 'soofw/scss/_include.scss')
-@bumpy.generates('soofw/static/main.css')
+	b.clean()
+
+@b.method
+@b.requires('soofw/scss/main.scss', 'soofw/scss/_include.scss')
+@b.generates('soofw/static/main.css')
 def css(self):
-	'Compiles the SCSS into CSS.'
+	'''Compile the SCSS into CSS.'''
 
 	# only build CSS if the SCSS is newer
-	if bumpy.age(*self.requirements) < bumpy.age(self.generates[0]):
+	if b.age(*self.file_requirements) < b.age(self.generates):
 		import scss
 		_scss = scss.Scss({}, {'compress': False, 'debug_info': False})
 
-		main_file = open(self.generates[0], 'w')
-		main_file.write(_scss.compile(scss_file=self.requirements[0]))
+		main_file = open(self.generates, 'w')
+		main_file.write(_scss.compile(scss_file=self.file_requirements[0]))
 
-@bumpy.generates('soofw/content/links.md')
+@b.generates('soofw/content/links.md')
 def links():
-	'Generates the "links" page.'
+	'''Generate the "links" page.'''
+
 	import fetch_delicious
 	fetch_delicious.main()
 
-@bumpy.default
-@bumpy.requires(css, links)
+@b.default
+@b.requires(css, links)
 def all():
-	'Generates all necessary files.'
+	'''Generate all necessary files.'''
+
 	pass
 
-@bumpy.task
+@b.task
 def run():
-	'Runs the server.'
+	'''Run the server.'''
+
 	soofw.app.run(host='0.0.0.0', debug=True)
