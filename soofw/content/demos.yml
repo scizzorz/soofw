@@ -5,3 +5,117 @@ body: |
   Here's a whole bunch of demos that I've made at some point fairly recently in my lifetime. Note that a lot of these are just quick and dirty experiments and likely have poorly documented and ugly code, but you might find a few pretty examples in there. Also note that I use <a href="http://google.com/chrome" target="_blank">Google Chrome</a> and, as such, only test in Google Chrome. These are my personal experiments and not my professional endeavors, afterall. If the demo doesn't work in other browsers, <a href="mailto:john@soofw.com">email me</a> and I might try and fix it.
 
   <span style="text-decoration: line-through">The demos are automatically pulled from an svn repository every six hours so they are susceptible to change without warning, although I try to make a new demo whenever I want to change something radically.</span> No, they aren't. I haven't worked with any demos in ages, so these are all stagnant.
+
+  ## Persistent Particles
+
+  ### heart <span class="sub">&#8210; [link](http://soofw.com/demos/heart)</span>
+
+  The original heart demo seems to be lost somewhere in the void, but this is a pretty similar demo. This was my first experiment with JavaScript and HTML5 canvases and I feel like it turned out pretty well. Clicking causes the particles to explode and reform.
+
+  ### heart+ <span class="sub">&#8210; [link](http://soofw.com/demos/heart+)</span>
+
+  Second edition of the <a href="/demos/heart">heart</a> demo. Particles swim through the hues of the rainbow and leave a pretty trail behind them. Clicking toggles a follow-the-mouse-mode.
+
+  ### heart++ <span class="sub">&#8210; [link](http://soofw.com/demos/heart++)</span>
+
+  Third edition of the <a href="/demos/heart">heart</a> demo. Particles leave behind a beautiful trail and are repelled by the cursor. Clicking scatters as in the original. <span style="font-weight: bold">Update:</span> now a <a href="http://www.chromeexperiments.com/detail/rainbow-heart/" target="_blank">Chrome Experiment!</a>
+
+  ### jack <span class="sub">&#8210; [link](http://soofw.com/demos/jack)</span>
+
+  Halloween special. A particle Jack-o-Lantern. Slightly modified the engine from the <a href="/demos/triforce">Triforce</a> by forcing particles to only move in the dominant direction of their velocity vector. Exciting stuff, really.
+
+  ### triforce <span class="sub">&#8210; [link](http://soofw.com/demos/triforce)</span>
+
+  Another particle demo that forms a static image of a <a href="http://www.zeldawiki.org/Royal_Crest" target="_blank">Royal Crest</a>. Clicking will scatter the particles.
+
+  ### yinyang <span class="sub">&#8210; [link](http://soofw.com/demos/yinyang)</span>
+
+  My first attempt at completely separating surface.js from the demo at hand. Reproduces the <a href="http://soofw.com/demos/heart++/">heart++</a> demo using two contrasting canvas elements. Note that the particles do <b>not</b> actually transfer between canvases - there are simply two canvases running the same code.
+
+  ### image <span class="sub">&#8210; [link](http://soofw.com/demos/image)</span>
+
+  Draws any image you want complete with cursor warping and clicksplosions. I used an <a href="/demos/image/proc.phps">improved version</a> of the <a href="/demos/cursive++/ilu.phps">PHP script</a> used in the <a href="/demos/cursive++">cursive++</a> demo to break down an image file using different levels of pixelification. Large images need to be highly pixelified in order to have any sort of interaction due to the ridiculous number of particles needed to create a full image.
+
+  ### anatomical-heart <span class="sub">&#8210; [link](http://soofw.com/demos/anatomical-heart)</span>
+
+  An anatomical heart demo. I used the image processing <a href="/demos/image/proc.phps">PHP script</a> from the <a href="/demos/image">image</a> demo to break down a <a href="/demos/anatomical-heart/heart.gif">drawing of a real heart</a>. By modifying the particle engine to draw particles relative to the center of the canvas, I'm able to simply multiply their destination positions by a constant and then divide by the same constant shortly after to create the illusion of a beating heart.
+
+
+  ## Temporary Particles
+
+  ### fireworks <span class="sub">&#8210; [link](http://soofw.com/demos/fireworks)</span>
+
+  A firework demo. Fireworks automatically shoot up from the ground and make a colorful explosion that slowly falls and fades. Clicking launches additional fireworks, but the explosions are pretty CPU-intensive and can quickly overwhelm your computer.
+
+  ### vortex <span class="sub">&#8210; [link](http://soofw.com/demos/vortex)</span>
+
+  Oh, you know. A rainbow vortex thing. Moving the mouse moves the vortex's center, clicking reverses the direction of the spiral.
+
+  ### spiral <span class="sub">&#8210; [link](http://soofw.com/demos/spiral)</span>
+
+  The original purpose of this demo has escaped me as well, but I think it had something to do with gravity and orbiting... It's kind of pretty at least.
+
+  ### clock <span class="sub">&#8210; [link](http://soofw.com/demos/clock)</span>
+
+  A basic, glowy analog clock that does nothing special. Loosely based on the <a href="/demos/glow">glow</a> demo.
+
+
+  ### glow <span class="sub">&#8210; [link](http://soofw.com/demos/glow)</span>
+
+  Softly colored rainbow particles explode from the center of the screen and float to the edges. Moving the cursor up and down rotates the whole plane. I was way too lazy to implement a real method for depth-sorting, so... yeah. There isn't really any of that.
+
+  ### sparkle <span class="sub">&#8210; [link](http://soofw.com/demos/sparkle)</span>
+
+  A pretty canvas with some sparkly particles.
+
+  ### fountains <span class="sub">&#8210; [link](http://soofw.com/demos/fountains)</span>
+
+  The original plan for this one has gone missing. Clicking produces a fountain of pretty particles that will float to random locations on the canvas. Particles are warped near the cursor.
+
+  ## Games
+
+  ### blok <span class="sub">&#8210; [link](http://soofw.com/demos/blok)</span>
+
+  A reincarnation of my years-old Block RPG 2 demo, but this time written in JavaScript instead of ActionScript 3.0. Maybe I'll get around to adding more stuff, maybe not.
+
+  ### bunnies <span class="sub">&#8210; [link](http://soofw.com/demos/bunnies)</span>
+
+  Some sort of bunny-like AI. Each bunny has a number of various genes that affect its life, such as vision, speed, and turning speed. Initially, the bunnies are microscopic and invisible, but they eventually grow up and start eating stuff. The food (small, immobile yellow dots) quickly becomes scarce and many bunnies starve and die, yet a few survive and continue to reproduce. Large ears indicate excellent vision (these bunnies see with their ears, man) and male bunnies have a single horn on their forehead (much like unicorns). Large bunnies eat small bunnies (bunny life is vicious) and eventually they just engulf the entire screen as the larger bunnies grow and eat the smaller bunnies. Widespread ears indicate that a bunny is ready for mating, while closed ears indicate the bunny is currently pursuing its intended mate. The average genes of all bunnies is visible in the top left corner. Clicking allows you to focus on an individual bunny and view its genes in the bottom left corner.
+
+  ### platform <span class="sub">&#8210; [link](http://soofw.com/demos/platform)</span>
+
+  A quick platforming engine I made. The goal is to grab the golden circle and then jump through the green escape portal before the box collapses or something. WASD and arrow keys move. Jumping at a wall and moving into it clings to the wall; holding both directions while clinging does a walljump.
+
+  ### sound <span class="sub">&#8210; [link](http://soofw.com/demos/sound)</span>
+
+  *My intended outcome for this has been done by someone else. Play with it [here](http://carlbarrdahl.se/tm/), view the source [here](https://github.com/carlbarrdahl/tonematrix).*
+
+  A sound synthesizer written in pure JavaScript. Clicking on a circle will enable it, causing the bar to produce a note when it passes over it. This demo seems to be rather unreliable on most computers and even has issues producing the correct notes occasionally. I'm not sure whether it's an issue with the HTML5 Audio element, its implementation in browsers, my implementation in code, or something else entirely, but if anyone has any ideas, I'd love to hear it so I can get this working for everyone.
+
+  ### story <span class="sub">&#8210; [link](http://soofw.com/demos/story)</span>
+
+  A small interactive story demo that uses jQuery animations to slide between pages.
+
+  ### story2 <span class="sub">&#8210; [link](http://soofw.com/demos/story2)</span>
+
+  A much longer and darker story demo. It actually has a story.
+
+  ## Typography
+
+  ### cursive++ <span class="sub">&#8210; [link](http://soofw.com/demos/cursive++)</span>
+
+  *This could also go under the "Particle" heading*
+
+  The second edition of the cursive demo (the original has been lost... shame on me for being so reckless). I borrowed a nice cursive font from the internet, saved a screenshot of the text as a <a href="/demos/cursive++/iluj.png">PNG image</a>, and then used a small <a href="/demos/cursive++/ilu.phps">PHP script</a> to read every other pixel and output the black pixels to a JavaScript array. The particle engine then sets each particle's initial position around the center in a heart and sets its target to a black pixel from the points array. Uses a modified version of the <a href="/demos/heart++">heart++</a> engine, so it has trails, cursor warping, and explosions.
+
+  ### text-fade <span class="sub">&#8210; [link](http://soofw.com/demos/text-fade)</span>
+
+  Paragraphs of text that fade in and out as you scroll.
+
+  ### text-glow <span class="sub">&#8210; [link](http://soofw.com/demos/text-glow)</span>
+
+  Paragraphs that change color as you scroll down. Specific words and phrases will glow as the cursor gets closer.
+
+  ### type <span class="sub">&#8210; [link](http://soofw.com/demos/type)</span>
+
+  A small animated demo of a neat typographic effects inspired by an <a href="http://www.html5rocks.com/en/tutorials/canvas/texteffects/#toc-spaceage" target="_blank" class="ext">HTML5 Rocks post</a>.  I did all of the actual drawing off-screen and just used canvas shadow offsets to put the shadows on-screen. Additionally, I used a sine wave with a shrinking amplitude, shadow blur, and font size to create the wavy effect.
