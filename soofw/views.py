@@ -12,6 +12,7 @@ def grab(path, name):
 	temp = yaml.load(open(os.path.join(app.config['CONTENT'], path, name)))
 	temp['path'] = path
 	temp['name'] = name
+	temp['basename'] = os.path.splitext(name)[0]
 	return temp
 
 # view a list of posts

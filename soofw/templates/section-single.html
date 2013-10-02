@@ -10,10 +10,10 @@
 	</h1>
 	{% block section_meta -%}
 		{% if 'tags' in article %}
-		<span class="tags shaded-links">posted {{article|date_prep}} <a href="{{ url_for('view_single', path='FIXME', name='FIXME') }}">{{ article|date }}</a> about
+		<span class="tags shaded-links">posted {{article|date_prep}} <a href="{{ url_for('view_single', path=article['path'], name=article['basename']) }}">{{ article|date }}</a> about
 				{% for tag in article['tags'] %}
 					{% if loop.last and loop.length > 1 %} and {% endif %}
-					<a href="{{ url_for('view_list', path='FIXME', tag=tag) }}">{{ tag }}</a>
+					<a href="{{ url_for('view_list', path=article['path'], tag=tag) }}">{{ tag }}</a>
 					{%- if not loop.last and loop.length > 2 %}, {% endif %}
 				{% endfor %}
 			</span>
@@ -21,8 +21,5 @@
 	{%- endblock %}
 	{% block section_content -%}
 		{{ article['body']|markdown }}
-		{% if 'add_continue' in article -%}
-			<p><a href="{{ url_for('view_single', path='FIXME', name='FIXME') }}">Continue...</a></p>
-		{%- endif %}
 	{%- endblock %}
 </section>

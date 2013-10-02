@@ -1,1 +1,1 @@
-<li><strong><a href="{{ url_for('view_single', path='FIXME', name='FIXME') }}">{{ article['title'] }}</a></strong> <span class="shade">{{ article|date_short }}</span></li>
+<li><strong><a href="{{ url_for('view_single', path=article['path'], name=article['basename']) }}">{{ article['title'] }}</a></strong> <span class="shade">{{ article|date_short }}</span></li>
