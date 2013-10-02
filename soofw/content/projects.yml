@@ -64,16 +64,15 @@ body: |
 
   Even though I spend a lot of my time in a terminal, there's plenty of situations where it's difficult or impossible for me to open a terminal and view my `trk` list. To remedy this, I've started developing an Android app using the same standards and specification that the command-line version of `trk` uses: a text file that contains a list of tasks and uses tags and patterns to organize and manage a to do list. Still under active development.
 
-    ## Widgets
+  ## Widgets
 
-    ### LCD Clock <span class="sub">&#8210; [github](https://github.com/scizzorz/arduino-remote-lcd)</span>
+  ### LCD Clock <span class="sub">&#8210; [github](https://github.com/scizzorz/arduino-remote-lcd)</span>
 
   A physical LCD clock. Written in C++ / [Python](http://www.python.org/). Powered by [Arduino](http://www.arduino.cc/).
 
   Arduinos are frickin' sweet as heck. I bought a few and was just waiting for some idea to hit me. I'd also been using a little Android app I wrote to control my desktop music from my bed, but I didn't really like having to reach for my phone, turn the screen on, etc. just to change the song, so I started to think about an alternative way to control it. Then the idea struck, and I decided to use an Arduino to do it. The actual box is about 4 inches x 3 inches x 2 inches, has four [illuminated buttons](http://www.adafruit.com/products/558) for control, a [white monochrome character LCD](https://www.sparkfun.com/products/9052) for disply, and an [Arduino Micro](http://www.adafruit.com/products/1086) for brains.
 
   *Pictures coming eventually.*
-
 
   ### Binary LED Clock <span class="sub">&#8210; [github](https://github.com/scizzorz/arduino-binary-clock)</span>
 
