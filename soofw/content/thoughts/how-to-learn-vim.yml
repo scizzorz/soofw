@@ -1,0 +1,9 @@
+title: 'How to Learn Vim'
+datetime: 2013-02-17 20:36:00
+tags:
+  - vim
+body: |
+  Well, at least that's what I was planning on writing today... Unfortunately, I got a little distracted by the idea of rewriting this web site to use Python instead of PHP. It's not that I hate PHP (I do) or anything, but I've recently become fascinated with Python.  I've tried this before, but it ended rather quickly because I was completely unfamiliar with Python, web frameworks in general, and the specific framework I was using (Django). Since I've gained significantly more experience with Python, hopefully I'm much more prepared for attempt two.
+
+  Since I was originally going to write about learning Vim, I also wanted to show off this neat Chrome extension I just discovered: [Vimium](https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb). Essentially, it adds some awesome Vim-style keybindings to the browser, such as `hjkl` movement, `gg` and `G` jumping, and `/searching`. If you're familiar with Vim, give it a shot. If you're still learning Vim, give it a shot. If you've never used Vim, give Vim a shot. If you've never heard of Vim, look it up and then give it a shot.
+

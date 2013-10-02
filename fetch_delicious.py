@@ -32,19 +32,19 @@ def main():
 
 	# open the file and write our intro paragraph
 	# figure out a better way to make this intro paragraph, man
-	filed = open('soofw/content/links.md', 'w')
-	filed.write("""* title = Links
-* page_title = links
-* navkey = links
-* nonum = True
-
-Here are some links I found and thought were pretty cool. They're grouped by tag, so some links will occur more than one time. The list can also be found on my [Delicious profile](https://delicious.com/scizzorz).
+	filed = open('soofw/content/links.yml', 'w')
+	filed.write("""title: 'Links'
+page_title: 'links'
+navkey: 'links'
+nonum: true
+body: |
+  Here are some links I found and thought were pretty cool. They're grouped by tag, so some links will occur more than one time. The list can also be found on my [Delicious profile](https://delicious.com/scizzorz).
 
 """)
 
 	for tag in tags:
 		print "%s x%d" % (tag, len(bundle[tag]))
-		filed.write("\n### %s\n" % tag)
+		filed.write("\n  ### %s\n" % tag)
 
 		for bookmark in bundle[tag]:
 			parts = urlparse(bookmark[URL])
@@ -54,7 +54,7 @@ Here are some links I found and thought were pretty cool. They're grouped by tag
 
 			#print "\t%s @ %s" % (bookmark[TITLE], base_url)
 			format_tuple = (bookmark[TITLE], bookmark[URL], base_url)
-			filed.write('* **[%s](%s)** <span class="shade">%s</span>\n' % format_tuple)
+			filed.write('  * **[%s](%s)** <span class="shade">%s</span>\n' % format_tuple)
 
 	filed.close()
 

@@ -1,0 +1,47 @@
+title: 'Hisss'
+datetime: 2012-11-01 00:03:00
+tags:
+  - git
+  - programming
+  - python
+body: |
+  I've always been really interested in learning Python. Its clean syntax and use of whitespace to delimit code blocks has always been very appealing, and the incredible amount of positive feedback I've seen about it is impressive. I've dabbled with it a few times, but never enough dabbling to solidify its semantics in my head. I even tried porting this web site over to [Django][] once, but I ended up losing motivation because of the brand new learning curve (like [Vim's][], it was intimidatingly steep). Recently, however, I decided to make a [terminal-based to do list][] and plunged right into it with Python. In the very beginning I was having difficulty handling the command line arguments properly, so I was tempted to switch to a more familiar language like PHP. In spite of PHP's calling, I knew I'd never learn Python if I just kept quitting in favor of a more familiar language, so I stuck with it.
+
+  [Django]: http://en.wikipedia.org/wiki/Django_(web_framework)
+  [Vim's]: http://soofw.com/post/126
+  [terminal-based to do list]: http://soofw.com/post/132
+
+  Man am I glad with that decision. After getting the arguments sorted out and actually getting into the logic of the system, I was blown away with how simple and expressive Python's syntax is. It's amazing how concise and readable everything is and how easy it is to create beautiful, easy-to-read code. Control structures are concise, formatting is simple, and complicated operations are reduced to simple expressions. Tasks that are cumbersome in other languages are made trivially easy with Python. For example, checking if the string `"Whose cookie is that?"` (stored in the variable `bigstring`) contains the substring `"cookie"` done in multiple languages:
+
+  <table>
+  	<tr><th>Language</th><th>Code</th></tr>
+  	<tr>
+  		<td><strong>C</strong></td>
+  		<td><code>strstr(bigstring,"cookie") != NULL</code><td>
+  	</tr>
+  	<tr>
+  		<td><strong>C++</strong></td>
+  		<td><code>bigstring.find("cookie") != string::npos</code><td>
+  	</tr>
+  	<tr>
+  		<td><strong>PHP</strong></td>
+  		<td><code>strpos($bigstring,"cookie") !== false</code><td>
+  	</tr>
+  	<tr>
+  		<td><strong>JavaScript</strong></td>
+  		<td><code>bigstring.indexOf("cookie") != -1</code><td>
+  	</tr>
+  	<tr>
+  		<td><strong>Java</strong></td>
+  		<td><code>bigstring.contains("cookie")</code><td>
+  	</tr>
+  	<tr>
+  		<td><strong>Python</strong></td>
+  		<td><code>"cookie" in bigstring</code><td>
+  	</tr>
+  </table>
+
+  It's not even a contest on which language is the most compact and readable. Of course, this form of succinct syntax, along with its whitespace-delimited code blocks, can be a source of confusion for people more familiar with other languages. For me, and I would imagine most people, especially those new to programming, this type of syntax is easy to pick up on and assimilate into.
+  This was also one of my first real experiences with Git, pushing me even further out of my comfort zone. I'd been using Subversion for almost a year and was pretty content with how it had turned out for me, but I couldn't ignore all the Git + GitHub hype going on in the internets. Another satisfying decision, as Git is incredibly powerful. I'm not nearly experienced enough to describe all its advantages, but a quick [Google search][] should explain it fairly well.
+  [Google search]: https://www.google.com/#q=why%20is%20git%20better%20than%20svn&fp=1&bav=on.2,or.r_gc.r_pw.r_cp.r_qf.&cad=b
+

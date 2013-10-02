@@ -1,5 +1,6 @@
-flask
-markdown2
-bumpy
+bumpy>=0.2.4
 deliciousapi
+flask
+flask-markdown
 pyscss
+pyyaml

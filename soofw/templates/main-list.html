@@ -1,12 +1,5 @@
 {% extends "main.html" %}
 {% block content %}
-	<ol id="toc" class="nonum shaded-links">
-		{% for tag in tags %}
-			<li><a href="{{ url_for('view_list', tag=tag, post_path=path) }}">{{ tag }}</a></li>
-		{% endfor %}
-		<li id="archive"><a href="{{ url_for('view_archive', post_path=path) }}">archive</a></li>
-		<li id="top"><a href="#container">back to top</a></li>
-	</ol>
 	{% for article in articles %}
 		{% include "section-single.html" %}
 	{% endfor %}
@@ -16,9 +9,9 @@
 				{% if i == page %}
 					<span>{{ i+1 }}</span>
 				{% elif i == 0 %}
-					<a href="{{ url_for('view_list', tag=tag, post_path=path) }}">1</a>
+					<a href="{{ url_for('view_list', tag=tag, path=path) }}">1</a>
 				{% else %}
-					<a href="{{ url_for('view_list', tag=tag, page=i+1, post_path=path) }}">{{ i+1 }}</a>
+					<a href="{{ url_for('view_list', tag=tag, page=i+1, path=path) }}">{{ i+1 }}</a>
 				{% endif %}
 			{% endfor %}
 		</section>
