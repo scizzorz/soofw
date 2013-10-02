@@ -63,17 +63,16 @@ section {
 	}
 	h2 {
 		font-size: 1.2em;
-		padding: 0 0 0.25em 0.25em;
-		border-bottom: 1px solid $borders;
 		margin: 2em 0 0.25em 0;
+		padding: 0 0 0.25em 0.25em;
 		text-transform: lowercase;
 	}
 	h3 {
-		font-size: 1.1em;
-		padding: 0 0 0 0.27em;
-		margin: 1em 0 0 0;
-		text-transform: none;
 		display: inline-block;
+		font-size: 1.1em;
+		margin: 1em 0 0 0;
+		padding: 0 0 0 0.27em;
+		text-transform: none;
 	}
 
 	.tags {
