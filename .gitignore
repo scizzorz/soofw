@@ -1,6 +1,6 @@
 *.pyc
 soofw/static/*.css
-soofw/content/links.md
+soofw/content/links.yml
 drafts
 tmp
 demos

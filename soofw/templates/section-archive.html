@@ -1,1 +1,1 @@
-<li><strong><a href="{{ url_for('view_single', post_path=article.path, post_name=article.basename[:-3]) }}">{{ article.title }}</a></strong> <span class="shade">{{ article|date_short }}</span></li>
+<li><strong><a href="{{ url_for('view_single', path=article['path'], name=article['basename']) }}">{{ article['title'] }}</a></strong> <span class="shade">{{ article|date_short }}</span></li>

@@ -9,9 +9,9 @@
 				{% if i == page %}
 					<span>{{ i+1 }}</span>
 				{% elif i == 0 %}
-					<a href="{{ url_for('view_list', tag=tag, post_path=path) }}">1</a>
+					<a href="{{ url_for('view_list', tag=tag, path=path) }}">1</a>
 				{% else %}
-					<a href="{{ url_for('view_list', tag=tag, page=i+1, post_path=path) }}">{{ i+1 }}</a>
+					<a href="{{ url_for('view_list', tag=tag, page=i+1, path=path) }}">{{ i+1 }}</a>
 				{% endif %}
 			{% endfor %}
 		</section>

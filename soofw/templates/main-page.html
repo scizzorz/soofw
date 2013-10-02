@@ -2,9 +2,9 @@
 
 {% block title %}
 	{% if 'page_title' in article %}
-		{{ article.page_title }}
+		{{ article['page_title'] }}
 	{% else %}
-		{{ article.title }}
+		{{ article['title'] }}
 	{% endif %}{{ super() }}
 {% endblock %}
 
