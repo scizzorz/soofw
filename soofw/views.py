@@ -21,9 +21,7 @@ def grab(path, name):
 @app.route('/<blog:path>/tag/<tag>/<int:page>/')
 def view_list(path, tag = None, page = 1):
 	articles = [grab(path, name) for name in os.listdir('soofw/content/' + path)]
-
-	# make them reverse chronological order
-	# FIXME
+	articles.sort(key=lambda x: x['datetime'])
 	articles.reverse()
 
 	# grab the tagged articles if we need to
@@ -60,9 +58,7 @@ def view_list(path, tag = None, page = 1):
 def view_archive(path):
 	# open all the articles as previews
 	articles = [grab(path, name) for name in os.listdir('soofw/content/' + path)]
-
-	# make them reverse chronological order
-	# FIXME
+	articles.sort(key=lambda x: x['datetime'])
 	articles.reverse()
 
 	bundle = {}
@@ -88,9 +84,7 @@ def view_archive(path):
 def view_rss(path):
 	# open all the articles as full posts
 	articles = [grab(path, name) for name in os.listdir('soofw/content/' + path)]
-
-	# make them reverse chronological order
-	# FIXME
+	articles.sort(key=lambda x: x['datetime'])
 	articles.reverse()
 
 	# get at most 10 articles
