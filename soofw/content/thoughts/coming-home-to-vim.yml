@@ -1,8 +1,29 @@
-title: "Coming Home to Vim"
+title: '"Coming Home to Vim"'
 datetime: 2012-10-17 20:53:00
 tags:
   - vim
 body: |
   I've read countless articles about using Vim, why to use Vim instead of other editors, how to make the big switch, etc. Among all of those articles, however, this is definitely one of the most thorough and comprehensive articles that I've read on the subject. Along with being fairly descriptive and explanatory, it doesn't disappoint when it comes to the things I've come to expect from Vim articles: an exciting and heart-warming tale about the author's struggle as they transition from a standard text editor to Vim's modal editing, and a list of useful features and commands that the author has collected in their time with Vim.
 
+  ## Vim sucks
+
+  Almost every article you can find about the switch from a standard text editor to Vim will tell you one thing: Vim sucks at first. The most likely reason for this phenomenon is the simple fact that Vim actually does suck at first. The change from a normal text editor is incredibly frustrating; even the most trivial of tasks becomes a monumental chore. It's suddenly a confusing mess of weird commands, keys, and modes. But then, as every article will tell you, it gets easier. Your brain starts mapping commands to muscle memory. Movement with `hjkl` no longer baffles you, toggling between command and insert mode becomes second nature, and you might have even learned a few nifty commands like yanking and searching.
+
+  The reason all of these articles are formulated the exact same way is because that's *exactly how it happens.* When you make the switch, you will hate it. You will be confused and wonder how anyone could possibly use this archaic system. But if you keep using it, eventually you'll start to find out how people can use it, and then you'll start to prefer it, and then you'll start to *crave* it.
+
+  ## Vim rocks
+
+  If you're lucky, the article you're reading will also give you a list of some commands and options the author has stumbled upon and compiled together for your education. My best guess for why this happens is the fact that there is such an incredible amount of commands that almost every person adopts a different subset to use on a regular basis. The sheer number of commands and level of customization that Vim offers is astounding, and that's part of what makes it suck at first. Being handed a sheet with even a tiny subset of the commands will be overwhelming, so most people are stuck using `hjkl` to move, `i` to enter insert mode, `esc` to go back to moving around your file, and `:wq` to save your file. After a while those commands get relocated from the "new" section of your brain to the "familiar" section, making some room in the "new" section for new commands, like `/` to search, `dd` to delete entire lines, and using numbers to multiply commands (eg `7dd`).
+
+  This is my favorite part of Vim articles, because even though I've been using Vim for close to three years, I still learn at least one new command or configuration every single time I read a new article. Every author has discovered a unique subset that flows with their individual editing style, and almost every one of those subsets will have a command you've never even heard of before. Since this is technically an article about Vim, I might as well follow suit and list just a few of my most used commands:
+
+  * `:##` jumps to line number `##`
+  * `ctX` and `dtX` will both delete from the cursor until *before* the first occurrence of character `X`. If you want to delete from the cursor until the first occurrence *including the first occurrence*, you can use `f` instead of `t`. Using `c` will place the editor into insert mode immediately after deletion
+  * `ci"` will delete all text between two quotes and place the editor into insert mode. Useful for changing an entire string
+  * `ctrl-o` jumps to the last position you were at. Very useful when I need to search for a line, make some changes, and then jump right back to where I was
+  * `>>` and `<<` will move your current line one indent forwards and backwards, respectively. You can also highlight multiple lines with `v` or `V` and indent them as a group with `>` and `<`
+  * `.` repeats the last text modification (eg `ciwbear` changes the current word to "bear", `.` will repeat that word change)
+  * `gv` will highlight the previous visual selection
+
+  *The end.*
 

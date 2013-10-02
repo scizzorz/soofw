@@ -1,4 +1,4 @@
-title: Layout Testing
+title: 'Layout Testing'
 datetime: 2013-02-02 16:13:00
 tags:
   - soofw
@@ -7,4 +7,45 @@ body: |
 
   If viewed on the home page, the article will break after this paragraph and ask you to continue reading. If viewed as a single article, nothing special happens after this paragraph. Oh yeah, here's `some inline code style`.
 
+  ## Header level 2 and paragraph
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis suscipit tempor eleifend. Etiam id odio non leo varius tempor. Maecenas lorem mi, rhoncus eu [a link for awesomeness](http://soofw.com/) interdum eu, sodales ac justo. Sed tellus nunc, elementum in eleifend at, hendrerit ac nisi. Morbi accumsan, nunc nec faucibus hendrerit, lectus lorem luctus diam, sit amet feugiat neque massa placerat quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec enim augue, pretium eu eleifend eget, venenatis in urna. Suspendisse non augue sem.
+
+  ### Header level 3 and paragraph
+  Fusce justo nibh, pharetra ac volutpat in, condimentum ac nisl. Sed sodales sodales sem nec gravida. Quisque ut ante nec augue tincidunt consectetur at nec magna. Integer fermentum neque sodales tellus semper consequat. Curabitur nec tempus erat. Donec nisl dolor, convallis nec ultricies at, lacinia non orci. Ut id ligula elit, at dignissim enim. Praesent hendrerit, lorem sed fringilla pharetra, nisi turpis consequat ligula, et placerat leo libero nec dui.
+
+  ## Quote
+
+  > To this end, Markdown's syntax is comprised entirely of punctuation
+  > characters, which punctuation characters have been carefully chosen
+  > so as to look like what they mean. E.g., asterisks around a word
+  > actually look like *emphasis*. Markdown lists look like, well, lists.
+  > Even blockquotes look like quoted passages of text, assuming you’ve
+  > ever used email.
+
+  ## Block formatted code
+
+  	Source Code Pro Regular
+  	abcdefghijklmnopqrstuvwxyz
+  	ABCDEFGHIJKLMNOPQRSTUVWXYZ
+  	0123456789.:,;(*!?')
+  	0oO()[]{}
+  	1iIl|L
+
+  ## Unordered list
+
+  * Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  * Aliquam eget augue vitae enim lacinia mollis.
+  * Praesent tristique turpis quis lectus aliquam at fringilla velit auctor.
+  * Nulla eu augue nulla, a posuere felis.
+  * Nam a ante non tortor faucibus placerat nec at metus.
+
+  ## Image
+  ![Alt Text](http://soofw.com/up/prompt.png)
+
+  ## Embedded Video
+  <iframe width="560" height="315" src="http://www.youtube.com/embed/gUXUjjg9qQ0?wmode=transparent" frameborder="0" allowfullscreen></iframe>
+
+  ## Closing paragraph
+
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis suscipit tempor eleifend. Etiam id odio non leo varius tempor. Maecenas lorem mi, rhoncus eu  interdum eu, sodales ac justo. Sed tellus nunc, elementum in eleifend at, hendrerit ac nisi. Morbi accumsan, nunc nec faucibus hendrerit, lectus lorem luctus diam, sit amet feugiat neque massa placerat  quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec enim augue, pretium eu eleifend eget, venenatis in urna. Suspendisse non augue sem.
 

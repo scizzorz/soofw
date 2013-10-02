@@ -1,8 +1,96 @@
-title: How to Learn Vim (Actually)
+title: 'How to Learn Vim (Actually)'
 datetime: 2013-03-16 13:35:00
 tags:
   - vim
 body: |
   When you first start learning Vim, it just [sucks](/post/coming-home-to-vim). Everyone (except a few lucky people) goes through the "this is stupid" phase, and a lot of those people just give up on Vim because it's so different. **Don't.** Vim has multitudes of advantages over traditional editors and IDEs; notably, its incredible efficiency and ease of access through remote shells like `ssh`. Since this article is about actually *learning* Vim, however, I'll be carrying on now...
 
+  ## Get Comfortable
+  Seriously. So many hardcore Vim users are dead set on fully immersing yourself immediately: "turn off the arrow keys", "don't use the mouse", etc. Wrong. You have to be *comfortable* before you can learn. If you're immediately thrown into a completely new editor with no sense of familiarity, you're going to go insane. It's hard to adapt to so much at one time, so take it slow. Start off with the very basics: arrows move, `i` enters insert mode, `<Esc>` leaves insert mode. That's it. Get comfortable with those things. If you want to use a mouse, try using the `set mouse=a` option in your `.vimrc`. You'll grow out of these habits eventually.
+
+  ## Learn Something New
+  Once you're comfortable using insert mode and the arrow keys / mouse, learn a few more neat tricks (check the bottom of this post for some starters). Don't try to learn a dozen; just pick one or two. Get *comfortable* with them. There's no point in learning a dozen commands if you won't remember any of them. Once you've gotten pretty comfortable and mostly mapped them to muscle memory, repeat the process and pick out one or two more. Take it slow and go at your own pace. There's *no point* to going too quickly because you won't retain as much. Notice a theme yet? **Be comfortable.**
+
+  ## Keep Out of Insert
+  You wan't to *stay out* of insert mode [as much as possible](http://www.viemu.com/a-why-vi-vim.html). Only enter insert mode if you're actually going to be *writing* something. If you're just moving around the file, even if it's just a few lines or characters, *get out!* You're wasting keystrokes. Most of Vim's efficiency lies in normal mode, so spending all of your time in insert mode is just plain wrong. If you have to enter insert mode every time you want to delete a letter, it's a minimum of three keystrokes: `i<Backspace><Esc>` or `a<Backspace><Esc>`. If you're rocking out in normal mode, it's one: `x`. If you want to delete *five* letters, insert mode will be a minimum of seven keystrokes, while normal mode will be two: `5x`. What if you  want to delete a *whole line*? In insert mode, you have to move all the way to the end of the line with the arrow keys, enter insert, and hold backspace until you're done. Or just stay in normal mode and press `dd` or `0D`, depending on whether you want the blank line to stay or not. Stop using insert mode. It's bad.
+
+  ## Make Your Own `.vimrc`
+  Don't download a suite of plugins and fully configured files. Instead, just start with a nice color scheme and some "essential" settings like line numbers. Get what you "need" to be effective, but try to keep it to a minimum. Just like learning too many commands, if you configure too many options or plugins you won't remember what you've done. Just start simple and build it up on your own.
+
+  ## Take Notes
+  Even better, write them *using* Vim. Open a file in your home directory and write down every new command you learn with a short description of how it's used or what it does. Check back on it every once in while. Alternately, make a cheat sheet or even [buy](http://vimcheatsheet.com) one. Even if you take your learning slowly, you might forget one or two commands after a day off. It's critical to review your notes or have a nice cheat sheet to refer to.
+
+  ## Learn Vim's Grammar
+  Vim's commands aren't discrete parts designed to be used separately; they were designed to be a fluid language that can be combined and used together to multiply the results. If you're trying to compound commands as one single command, you should take some time to read about Vim's [grammar](http://rc3.org/2012/05/12/the-grammar-of-vim/). It'll give you a huge boost once you start getting some of the advanced motions mastered.
+
+  ## Starting Commands
+
+  ### Inserting
+  * `i` enters insert mode before the cursor
+  * `I` enters insert mode *before first non-whitespace character* on the line
+  * `a` enters insert mode *after* the cursor
+  * `A` enters insert mode *at the end* of the line
+  * `o` inserts a new line *below* the cursor and enters insert mode
+  * `O` inserts a new line *above* the cursor and enters insert mode
+  * `<Esc>` leaves insert / visual mode
+
+  ### Moving
+  * `hjkl` move the cursor
+    * `h` moves left (it's the leftmost key)
+    * `j` moves down (it looks like an arrow pointing down)
+    * `k` moves up (because)
+    * `l` moves right (it's the rightmost key)
+    * Learn these once you're comfortable with a few others.
+  * `0` moves to the first character
+  * `^` moves to the first non-blank character
+  * `$` moves to the last character
+  * `gg` moves the cursor to the first line
+  * `G` moves the cursor to the last line
+  * `:X` or `XG` moves the cursor to line number *X*
+  * `e` moves to the end of the current word, or the end of the next if you're already at the end of a word
+  * `w` moves to the beginning of the next word
+  * `b` moves to the beginning of the current word, or the beginning of the previous if you're already at the beginning
+  * `EWB` are similar but use whitespace as the word delimeter instead of punctuation (commonly referred to as WORDs instead)
+  * `tX` moves the cursor to the first occurence of character *x*
+  * `fX` moves the character onto the first occurence of character *x*
+  * `TX` is the same as `tX` but searches left
+  * `FX` is the same as `fX` but searches left
+  * `/search` will search the whole file for the term 'search'
+    * `n` will find the next occurrence of your search term
+    * `N` will find the previous occurrence of your search term
+    * starting the search with `?search` will automatically start in reverse search mode
+
+  ### Editing
+  * `x` deletes the character under the cursor
+  * `dd` deletes the current line
+  * `D` erases everything on the line after the cursor
+  * `yy` yank (copy) the current line into the default register (a register is like a clipboard)
+  * `p` pastes the default register *after / below* the cursor
+  * `P` pastes the default register *before / above* the cursor
+  * `:wq` saves and quites; `:w` just saves; `:q` just quits; `:q!` quits and discards unsaved changes.
+  * `cc` or `S` erases the current line and enters insert mode
+  * `C` erases everything after the cursor and enters insert mode
+  * `s` erases the character under the cursor and enters insert mode
+  * `ciX` erases everthing *inside* the delimeter *X* and enters insert mode. *X* can be several items:
+    * `(` or `)` will select inside the pair
+    * `[` or `]` will select inside the pair
+    * `{` or `}` will select inside the pair
+    * `'` or `"` will select inside the pair
+    * `w` or `W` will select inside the word or WORD
+    * `t` or `T` will select inside the HTML/XML tag
+  * `caX` erases everything *around* the delimeter *X* (including *X*) and enters insert mode. You can use the same options as with `ciX`
+  * `diX` and `daX` work like `ciX` and `caX`
+  * `rX` replaces the character under the cursor with *X*
+  * `R` enters replace mode, causing any characters typed to replace the character under the cursor
+
+  ## "Essential" `.vimrc` settings
+  Just add these to your `~/.vimrc` file and Vim will load them every time it starts up. If you're looking for more powerful options, check my [GitHub](http://github.com/scizzorz/dots).
+
+  * `set number` will turn on line numbers
+  * `set incsearch` will turn on incremental search. This jumps to search terms as you type them
+  * `set hlsearch` will highlight all matching search terms
+  * `set ignorecase` will ignore case while searching
+  * `set smartcase` same as `ignorecase` UNLESS you use a capital letter in your search
+  * `set tabstop=X` set the number of spaces that represent a tab
+  * `syntax on` turns on syntax highlighting
 
