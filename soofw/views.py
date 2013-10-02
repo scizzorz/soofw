@@ -105,7 +105,7 @@ def view_rss(path):
 @app.route('/<blog:path>/<name>/')
 def view_single(path, name):
 	# open the article
-	article = grab(path, name)
+	article = grab(path, str(name))
 
 	# if it has a meta redirect, follow it
 	if 'redirect' in article:
