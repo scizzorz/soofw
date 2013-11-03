@@ -22,7 +22,7 @@ hr {
 
 // each post is contained in a section
 section {
-	margin: 0 0 2em 0;
+	margin: 0;
 	padding: 1em 1em 1px 1em; // stupid paragraph margins at the bottom of the section ruin the padding
 	line-height: 1.5em;
 	text-align: justify;
@@ -62,8 +62,8 @@ section {
 	}
 	h2 {
 		font-size: 1.2em;
-		margin: 2em 0 0.25em 0;
-		padding: 0 0 0.25em 0.25em;
+		margin: 1em 0 0 0;
+		padding: 0 0 0 0.25em;
 	}
 	h3 {
 		display: inline-block;
