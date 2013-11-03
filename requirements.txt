@@ -1,4 +1,4 @@
-bumpy>=0.2.4
+bumpy>=0.4.3
 deliciousapi
 flask
 flask-markdown
