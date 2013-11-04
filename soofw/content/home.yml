@@ -2,14 +2,52 @@ title: 'Welcome!'
 page_title: 'home'
 navkey: 'home'
 body: |
-  Welcome to the wonderful world of soofw. My name is John (aka scizzorz). I'm 20 years old and studying computer science at [Binghamton University](http://binghamton.edu/) in New York. You can email me at <jweachock@gmail.com>.
+  Welcome to the wonderful world of soofw. My name is John (aka scizzorz). I'm
+  20 years old and studying computer science at [Binghamton
+  University](http://binghamton.edu/) in New York. You can email me at
+  <jweachock@gmail.com>.
 
-  This site serves as my code playground and experimental zone. I like playing around with new stuff, so the site is usually under construction. In the meantime, I use it to express my [thoughts](Http://soofw.com/thoughts/) and try to produce useful content for people. In general, I try to post things that *I* would like to read about: tools I'm using, my personalized settings, opinions on things, design decisions, work styles, etc. and the rationale behind all of those things. I find that reading about the experiences of other people has certainly influenced the way I work and helped me to become better at the things I do, so I try to replicate that effect and hope that I help someone else find a new tool or learn something new. I have a section to showcase my [personal projects](http://soofw.com/projects/), because I like to see what others have made as well. There's a small corner dedicated to interesting articles over [here](http://soofw.com/links/), and there's a long list of HTML5 canvas demos over [here](http://soofw.com/demos/).
+  This site serves as my code playground and experimental zone. I like playing
+  around with new stuff, so the site is usually under construction. In the
+  meantime, I use it to express my [thoughts](Http://soofw.com/thoughts/) and
+  try to produce useful content for people. In general, I try to post things
+  that *I* would like to read about: tools I'm using, my personalized settings,
+  opinions on things, design decisions, work styles, etc. and the rationale
+  behind all of those things. I find that reading about the experiences of
+  other people has certainly influenced the way I work and helped me to become
+  better at the things I do, so I try to replicate that effect and hope that I
+  help someone else find a new tool or learn something new. I have a section to
+  showcase my [personal projects](http://soofw.com/projects/), because I like
+  to see what others have made as well. There's a small corner dedicated to
+  interesting articles over [here](http://soofw.com/links/), and there's a long
+  list of HTML5 canvas demos over [here](http://soofw.com/demos/).
 
   I hope you enjoy your visit!
 
   ---
 
-  I'm a fan of Android and Linux. I have a Samsung Galaxy Nexus and a Google Nexus 7 (2013 model); my phone runs CyanogenMod.1 nightlies. My desktop is running Crunchbang 11 Waldorf with two monitors and a Razer BlackWidow Ultimate mechanical keyboard, because mechanical keyboards are *awesome*. I designed and built my desk with programming and brainstorming in mind; as a result, the desktop surface is a whiteboard. I have a Samsung ARM Chromebook that I use when I'm out and about, and a Raspberry Pi for <span style="text-decoration: line-through">fun</span> nothing :( I use [Linode](http://www.linode.com/) for my production servers, and [DigitalOcean](https://www.digitalocean.com/) for my development and staging machines. I try to host most of my code and configurations on my [GitHub](https://github.com/scizzorz), although any confidential or private code is located on my own instance of [GitLab](http://gitlab.org/).
+  I'm a fan of Android and Linux. I have a Samsung Galaxy Nexus and a Google
+  Nexus 7 (2013); my phone runs CyanogenMod 10.1 nightlies. My desktop is
+  running Crunchbang 11 Waldorf with two monitors and a Razer BlackWidow
+  Ultimate mechanical keyboard, because mechanical keyboards are *awesome*. I
+  designed and built my desk with programming and brainstorming in mind; as a
+  result, the desktop surface is a whiteboard. I have a Samsung ARM Chromebook
+  that I use when I'm out and about, and a Raspberry Pi for
+  <span style="text-decoration: line-through">fun</span> nothing :( I use
+  [Linode](http://www.linode.com/) for my production servers, and
+  [DigitalOcean](https://www.digitalocean.com/) for my development and staging
+  machines. I try to host most of my code and configurations on my
+  [GitHub](https://github.com/scizzorz), although any confidential or private
+  code is located on my own instance of [GitLab](http://gitlab.org/).
 
-  I use Openbox as my window manager. I use `urxvt` on my desktop and [Secure Shell](https://chrome.google.com/webstore/detail/secure-shell/pnhechapfaindjhompbnflcldabbghjo?hl=en) on my Chromebook, both with a custom [color scheme](https://github.com/scizzorz/dots/blob/master/terminal-palette). I use `bash` as my shell and `tmux` to make it more useful. For editing text of any sort, I use `vim`. I use Git for version control on all of my projects. I prefer to use Python for most of my programming, although I have plenty of experience with PHP, JavaScript, Java. I'm also proficient with SQL, C/C++, Lua, HTML5, and CSS3, and I'm in the process of learning Haskell. I've tinkered with Android app development, Arduino, woodworking, etc., but a lot of my free time goes into web programming and scripting neat toys.
+  I use Openbox as my window manager. I use `urxvt` as my desktop terminal and
+  [Secure Shell](https://chrome.google.com/webstore/detail/secure-shell/pnhechapfaindjhompbnflcldabbghjo?hl=en)
+  on my Chromebook, both with a custom [color
+  scheme](https://github.com/scizzorz/dots/blob/master/terminal-palette). I use
+  `bash` as my shell and `tmux` to make it more useful. For editing text of any
+  sort, I use `vim`. I use Git for version control on all of my projects. I
+  prefer to use Python for most of my programming, although I have plenty of
+  experience with PHP, JavaScript, Java. I'm also proficient with SQL, C/C++,
+  Lua, HTML5, and CSS3, and I think Haskell is pretty neat. I've tinkered with
+  Android app development, Arduino, woodworking, etc., but a lot of my free
+  time goes into web programming and scripting neat toys.
