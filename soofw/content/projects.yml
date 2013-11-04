@@ -16,15 +16,17 @@ body: |
 
   ### Canvas Demos <span class="sub">&#8210; [link](http://soofw.com/demos/)</span>
 
-  A collection of web experiments. Written in JavaScript. Powered by the HTML5 canvas element.
+  A collection of web experiments. Written in JavaScript. Powered by HTML5 canvas elements.
 
   I like tinkering with new toys. I heard about HTML5 and its new canvas witchcraft, and since I kinda missed making pretty things with Flash, I leapt right into it. These are the results of all that tinkering. These are mostly just dirty coding done in my free time, so don't expect any high-quality code here. There's also a pretty good chance it won't work if you're using some ancient browser.
 
-  ### Rainbow Heart <span class="sub">&#8210; [experiments page](http://www.chromeexperiments.com/detail/rainbow-heart/) / [link](http://soofw.com/demos/heart++) / [github](https://github.com/scizzorz/heart)</span>
+  #### Rainbow Heart <span class="sub">&#8210; [experiments page](http://www.chromeexperiments.com/detail/rainbow-heart/) / [link](http://soofw.com/demos/heart++) / [github](https://github.com/scizzorz/heart)</span>
 
-  A rainbow heart composed of elastic particles. Written in JavaScript. Powered by a handmade particle engine that utilizes the HTML5 canvas element.
+  A rainbow heart composed of elastic particles.
 
   This was one of the first canvas demos I did. I just kinda randomly applied for the [Chrome Experiments](http://www.chromeexperiments.com/) and they accepted me. I was pretty happy about that.
+
+  ---
 
   ## Command Line
 
@@ -52,9 +54,11 @@ body: |
 
   ### multigit <span class="sub">&#8210; [github](https://github.com/scizzorz/multigit)</span>
 
-  A tool for checking up on multiple local git repos. Written in bash.
+  A tool for checking up on multiple local Git repos. Written in bash.
 
   Frequently, I find myself working on several different projects in quick succession and easily lose track of which projects are uncommitted, unpushed, need to be fetched/merged, etc., so I created `multigit` to easily execute a command across multiple Git repos. For example, I can simply type `multigit status -s` and get a quick glimpse of each repo's status, or I can type `multigit pull` to automatically fetch and merge every repo that I'm tracking.
+
+  ---
 
   ## Android Apps
 
@@ -63,6 +67,8 @@ body: |
   A to do list manager. Written in [Java](http://www.java.com/) with the [Android SDK](http://developer.android.com/index.html).
 
   Even though I spend a lot of my time in a terminal, there's plenty of situations where it's difficult or impossible for me to open a terminal and view my `trk` list. To remedy this, I've started developing an Android app using the same standards and specification that the command-line version of `trk` uses: a text file that contains a list of tasks and uses tags and patterns to organize and manage a to do list. Still under active development.
+
+  ---
 
   ## Widgets
 

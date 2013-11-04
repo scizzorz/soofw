@@ -28,7 +28,7 @@ section {
 	text-align: justify;
 
 	// headers
-	h1, h2, h3 {
+	h1, h2, h3, h4 {
 		padding: 0;
 		margin: 0;
 		color: $strong;
@@ -68,6 +68,12 @@ section {
 		font-size: 1.1em;
 		margin: 1em 0 0 0;
 		padding: 0 0 0 0.27em;
+	}
+	h4 {
+		display: inline-block;
+		font-size: 1em;
+		margin: 1em 0 0 0;
+		padding: 0 0 0 0.3em;
 	}
 
 	.tags {
