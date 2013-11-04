@@ -13,7 +13,7 @@ def format_date(article):
 
 	# today: just the time
 	if delta.days == 0:
-		return 'today at ' + article['datetime'].strftime('%l:%M%p')
+		return article['datetime'].strftime('today at %l:%M%p')
 
 	formatted = article['datetime'].strftime('%B %e')
 
