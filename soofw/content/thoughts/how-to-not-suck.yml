@@ -1,0 +1,56 @@
+title: How to Not Suck (at Being a Programmer)
+datetime: 2013-11-4 18:30:00
+tags: [shells, vim, git, regex]
+body: |
+  One of the lamest features of being a programmer is the overabundance of
+  trivial tasks that are just plain *boring* and *time-consuming.* Fortunately,
+  our craft lends itself very well to enabling *laziness*: not in a negative
+  sense, but rather, a productivity-boosting, awesome sense. Traditionally,
+  renaming a set of 5000 files to conform to a new naming convention (*eg*
+  converting `.JPG` to `.jpg`) would take a tremendous amount of effort and an
+  equally tremendous amount of forever. By being lazy, a programmer can expend
+  a miniscule sliver of that effort and time to write a [simple script that
+  automates the whole process](https://gist.github.com/scizzorz/7310892).
+
+  I'm a big fan of being lazy, so here's a bunch of tips to help you become a
+  big fan of being lazy!
+
+  ## Shells
+
+  Learn to love terminals / shells and the incredible power and flexibility
+  they offer you. A GUI *cannot* compete with a shell when it comes to raw
+  power, extensibility, flexbility, or anything else that actually matters.
+  Furthermore, there may be situations where you're confined to *only* a
+  terminal can't access a GUI. Knowing how to manipulate a shell is an
+  incredibly understated skill in the programmer's arsenal.
+
+  ## Text editors
+
+  Use a *real* text editor. That means one that works through `ssh`, *without*
+  a window manager. That means you need to get used to using a terminal. If you
+  disagree with me on this point, that's fine, and I respect your opnion, but
+  you're wrong and I hate you. GUI text editors get a few pretty features that
+  a terminal editor simply can't support, but in the long run, they pale in
+  comparison when it comes to features, power, and flexibility. Notice a theme
+  here?
+
+  ## Regular Expressions
+
+  Regular expressions are like find-and-replace on mega steroids. I can't even
+  count the number of times I've seen another person poking around a file,
+  replacing a dozen function calls with a similar but slightly different
+  function call.  Not only is this a totally anti-lazy way of doing things, but
+  it's error prone: one poor function call may go unnoticed and remain unchanged,
+  leading to headaches for future you or future maintainers.
+
+  ## Version Control
+
+  This is the **most important** of all the things in this list. Everything else
+  on this list is *possible* to argue against, but no one in their right mind
+  would argue against using version control. Not using version control is
+  completely imbecilic and unprofessional. Version control acts as a safety net
+  against accidental hardware failures, file deletions, explosions, etc. Beyond
+  that, it provides a whole host of awesome features that you should want to use
+  anyway: easy collaboration, quick changelog summaries, project histories,
+  systems to test new features or experiments, and more. Use version control or
+  go home.
