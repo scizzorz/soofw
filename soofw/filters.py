@@ -35,17 +35,6 @@ def format_date(article):
 
 	return formatted
 
-@app.template_filter('date_prep')
-def format_date_prep(article):
-	if 'datetime' not in article:
-		return ''
-
-	delta = dt.today() - article['datetime']
-	if delta.days == 0:
-		return ''
-
-	return 'on'
-
 @app.template_filter('date_short')
 def format_date_short(article):
 	if 'datetime' not in article:
