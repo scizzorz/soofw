@@ -12,6 +12,8 @@ body: |
   a miniscule sliver of that effort and time to write a [simple script that
   automates the whole process](https://gist.github.com/scizzorz/7310892).
 
+  *Update: [even easier than I thought](https://gist.github.com/scizzorz/7311407).*
+
   I'm a big fan of being lazy, so here's a bunch of tips to help you become a
   big fan of being lazy!
 
@@ -21,7 +23,7 @@ body: |
   they offer you. A GUI *cannot* compete with a shell when it comes to raw
   power, extensibility, flexbility, or anything else that actually matters.
   Furthermore, there may be situations where you're confined to *only* a
-  terminal can't access a GUI. Knowing how to manipulate a shell is an
+  terminal and can't access a GUI. Knowing how to manipulate a shell is an
   incredibly understated skill in the programmer's arsenal.
 
   ## Text editors
