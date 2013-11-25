@@ -2,7 +2,7 @@ import flask, os, yaml
 from soofw import app
 
 POSTS_PER_PAGE = 6
-app.config['NAVIGATION'] = ['thoughts', 'projects', 'demos', 'links']
+app.config['NAVIGATION'] = ['thoughts', 'projects', 'demos']
 app.config['CONTENT'] = 'soofw/content/'
 
 def grab(path, name):

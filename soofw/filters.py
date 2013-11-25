@@ -72,7 +72,7 @@ class PageConverter(routing.BaseConverter):
 		self.regex = r'\w+'
 
 	def to_python(self, value):
-		if value in ('links', 'projects', 'demos'):
+		if value in ('projects', 'demos'):
 			return value
 
 		raise routing.ValidationError()
