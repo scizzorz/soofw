@@ -22,7 +22,7 @@ hr {
 }
 
 div#container {
-	width: 50em;
+	//width: 50em; // see queries at EOF
 	margin: 0 auto;
 	color: $foreground;
 }
@@ -59,8 +59,7 @@ nav {
 ul#nav {
 	padding: 0;
 	margin: 0;
-	font-size: 1.2em;
-	letter-spacing: 0.2em;
+	font-size: 1.5em;
 	font-weight: normal;
 	text-transform: lowercase;
 	position: relative;
@@ -288,7 +287,7 @@ div#raven {
 	background-position: bottom-right;
 	height: 78px;
 	width: 96px;
-	display: block;
+	//display: block; // see queries at EOF
 }
 
 @media only screen and (max-device-width: 768px) {
@@ -298,5 +297,14 @@ div#raven {
 
 	div#raven {
 		display: none;
+	}
+}
+@media only screen and (min-width: 769px) {
+	div#container {
+		width: 50em;
+	}
+
+	div#raven {
+		display: block;
 	}
 }
