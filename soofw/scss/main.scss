@@ -4,6 +4,7 @@
 html, body {
 	font-family: Arial, sans-serif;
 	font-size: $fontsize;
+	line-height: 1.5em;
 	padding: 0;
 	margin: 0;
 }
@@ -20,167 +21,6 @@ hr {
 	border-bottom: 1px solid $borders;
 }
 
-// each post is contained in a section
-section {
-	margin: 0;
-	padding: 1em 1em 1px 1em; // stupid paragraph margins at the bottom of the section ruin the padding
-	line-height: 1.5em;
-	text-align: justify;
-
-	// headers
-	h1, h2, h3, h4 {
-		padding: 0;
-		margin: 0;
-		color: $strong;
-		.sub {
-			font-size: $fontsize;
-			font-weight: normal;
-		}
-	}
-	strong, em {
-		color: $strong;
-	}
-	h1 {
-		font-size: 1.3em;
-		padding: 0 0 0 0.23em;
-		a {
-			color: $accent;
-			text-decoration: none;
-			@include color-transition;
-		}
-		a:hover {
-			color: $hover;
-		}
-		a:after {
-			content: " »";
-			font-size: 1.25em;
-			line-height: 1.25em;
-			text-decoration: none;
-		}
-	}
-	h2 {
-		font-size: 1.2em;
-		margin: 1em 0 0 0;
-		padding: 0 0 0 0.25em;
-	}
-	h3 {
-		display: inline-block;
-		font-size: 1.1em;
-		margin: 1em 0 0 0;
-		padding: 0 0 0 0.27em;
-	}
-	h4 {
-		display: inline-block;
-		font-size: 1em;
-		margin: 1em 0 0 0;
-		padding: 0 0 0 0.3em;
-	}
-
-	.tags {
-		padding: 0 0 0 0.3em;
-		color: $shade;
-		font-size: 1em;
-		text-transform: lowercase;
-		display: block;
-	}
-
-	p {
-		margin: 1em 0;
-		padding: 0 0.3em;
-	}
-
-	iframe, img {
-		margin: 1em auto;
-		padding: 0.3em;
-		display: block;
-		max-width: 40em;
-		background-color: darken($background, 5%);
-		border: 1px solid $shade;
-	}
-
-	blockquote, pre {
-		display: block;
-		margin: 1em;
-		border: 1px solid $borders;
-		background-color: darken($background, 5%);
-	}
-	blockquote {
-		// inside paragraphs make up the top and bottom margins
-		// but if you have 0 vertical padding, they don't.
-		// they only work if you have at least 1px.
-		// using the standard 1em padding will double pad.
-		padding: 1px 0;
-	}
-	blockquote .author {
-		color: $shade;
-	}
-	blockquote .author:before {
-		content: "~ ";
-	}
-	pre {
-		padding: 1em 0 1em 0.5em;
-		white-space: pre-wrap;
-		white-space: -moz-pre-wrap;
-		white-space: -pre-wrap;
-		white-space: -o-pre-wrap;
-		word-wrap: break-word;
-		code {
-			display: block;
-			border: none;
-		}
-	}
-	code {
-		background-color: darken($background, 5%);
-		display: inline-block;
-		font-family: SourceCodePro;
-		text-transform: none !important; // NEVER change code case
-		border: 1px solid $borders;
-		padding: 0 0.3em;
-		margin: 1px 0;
-	}
-
-	a {
-		color: $accent;
-		text-decoration: none;
-		@include color-transition;
-		code {
-			border-color: $borders;
-		}
-		&:hover {
-			color: $hover;
-		}
-	}
-
-	ul {
-		list-style: url(/static/bullet.png);
-		padding: 0 1em 0 2em;
-	}
-
-	table {
-		width: 100%;
-		margin: 1em 0;
-		th {
-			text-align: left;
-			text-transform: uppercase;
-		}
-		td {
-			padding: 0.3em;
-		}
-	}
-
-	.content {
-		margin: 1em 0;
-		padding: 0;
-	}
-
-	.poem {
-		border: none;
-		text-align: center;
-		font-family: Arial;
-	}
-}
-
-// main body container
 div#container {
 	width: 50em;
 	margin: 0 auto;
@@ -193,7 +33,6 @@ div#content {
 	position: relative;
 }
 
-// header (site logo)
 header {
 	font-size: $fontsize;
 	height: 2em;
@@ -212,13 +51,11 @@ header {
 	font-weight: bold;
 }
 
-// navigation container
 nav {
 	text-align: center;
 	display: inline-block;
 }
 
-// navigation ul
 ul#nav {
 	padding: 0;
 	margin: 0;
@@ -242,6 +79,178 @@ ul#nav {
 	.nav-thoughts:before, .nav-links:before {
 		content: " // ";
 	}
+}
+
+section {
+	margin: 0;
+	padding: 1em 1em 1px 1em; // stupid paragraph margins at the bottom of the section ruin the padding
+	text-align: justify;
+}
+
+h1, h2, h3 {
+	padding: 0;
+	margin: 0;
+	line-height: 1.5em;
+	color: $strong;
+	.sub {
+		font-size: $fontsize;
+		font-weight: normal;
+	}
+}
+
+h1 {
+	font-size: 2em;
+	padding: 0 0 0 0.15em;
+	a {
+		color: $accent;
+		text-decoration: none;
+		@include color-transition;
+	}
+	a:hover {
+		color: $hover;
+	}
+	a:after {
+		content: " »";
+		font-size: 1.25em;
+		line-height: 1.25em;
+		text-decoration: none;
+	}
+}
+
+h2 {
+	font-size: 1.5em;
+	margin: 1em 0 0 0;
+	padding: 0 0 0 0.2em;
+}
+
+h3 {
+	display: inline-block;
+	font-size: 1em;
+	margin: 1em 0 0 0;
+	padding: 0 0 0 0.3em;
+}
+
+.tags {
+	padding: 0 0.3em;
+	color: $shade;
+	font-size: 1em;
+	text-transform: lowercase;
+	display: block;
+}
+
+a {
+	color: $accent;
+	text-decoration: none;
+	@include color-transition;
+	code {
+		border-color: $borders;
+	}
+	&:hover {
+		color: $hover;
+	}
+}
+
+.shaded-links {
+	a {
+		color: $shade;
+		text-decoration: none;
+		@include color-transition;
+		&:hover {
+			color: $accent;
+		}
+	}
+}
+
+
+strong {
+	color: $strong;
+}
+
+p {
+	margin: 1em 0;
+	padding: 0 0.3em;
+}
+
+iframe, img {
+	margin: 1em auto;
+	padding: 0.3em;
+	display: block;
+	max-width: 40em;
+	background-color: darken($background, 5%);
+	border: 1px solid $shade;
+}
+
+code {
+	background-color: darken($background, 5%);
+	display: inline-block;
+	font-family: SourceCodePro;
+	text-transform: none !important; // NEVER change code case
+	border: 1px solid $borders;
+	padding: 0 0.3em;
+	margin: 1px 0;
+}
+
+blockquote, pre {
+	display: block;
+	margin: 1em;
+	border: 1px solid $borders;
+	background-color: darken($background, 5%);
+}
+
+blockquote {
+	// inside paragraphs make up the top and bottom margins
+	// but if you have 0 vertical padding, they don't.
+	// they only work if you have at least 1px.
+	// using the standard 1em padding will double pad.
+	padding: 1px 0;
+}
+
+blockquote small {
+	color: $shade;
+}
+blockquote small:before {
+	content: "~ ";
+}
+
+pre {
+	padding: 1em 0 1em 0.5em;
+	white-space: pre-wrap;
+	white-space: -moz-pre-wrap;
+	white-space: -pre-wrap;
+	white-space: -o-pre-wrap;
+	word-wrap: break-word;
+	code {
+		display: block;
+		border: none;
+	}
+}
+
+ul {
+	list-style: url(/static/bullet.png);
+	padding: 0 1em 0 2em;
+}
+
+table {
+	width: 100%;
+	margin: 1em 0;
+	th {
+		text-align: left;
+		text-transform: uppercase;
+	}
+	td {
+		padding: 0.3em;
+	}
+}
+
+.content {
+	margin: 1em 0;
+	padding: 0;
+}
+
+.poem {
+	border: none;
+	text-align: center;
+	font-family: Arial;
 }
 
 // the section that shows pagination?
@@ -268,17 +277,6 @@ footer {
 	padding: 1.5em 0 0 0;
 }
 
-.shaded-links {
-	a {
-		color: $shade;
-		text-decoration: none;
-		@include color-transition;
-		&:hover {
-			color: $accent;
-		}
-	}
-}
-
 
 // the raven!
 div#raven {
@@ -291,4 +289,14 @@ div#raven {
 	height: 78px;
 	width: 96px;
 	display: block;
+}
+
+@media only screen and (max-device-width: 768px) {
+	div#container {
+		width: 100%;
+	}
+
+	div#raven {
+		display: none;
+	}
 }
