@@ -28,19 +28,18 @@ body: |
 
   ---
 
-  I'm a fan of Android and Linux. I have a Samsung Galaxy Nexus and a Google
-  Nexus 7 (2013); my phone runs CyanogenMod 10.1 nightlies. My desktop is
-  running Crunchbang 11 Waldorf with two monitors and a Razer BlackWidow
-  Ultimate mechanical keyboard, because mechanical keyboards are *awesome*. I
-  designed and built my desk with programming and brainstorming in mind; as a
-  result, the desktop surface is a whiteboard. I have a Samsung ARM Chromebook
-  that I use when I'm out and about, and a Raspberry Pi for
-  <span style="text-decoration: line-through">fun</span> nothing :( I use
-  [Linode](http://www.linode.com/) for my production servers, and
-  [DigitalOcean](https://www.digitalocean.com/) for my development and staging
-  machines. I try to host most of my code and configurations on my
-  [GitHub](https://github.com/scizzorz), although any confidential or private
-  code is located on my own instance of [GitLab](http://gitlab.org/).
+  I'm a fan of Android and Linux. I have a Moto X and a Google Nexus 7 (2013),
+  both running stock Android 4.4. My desktop is running Crunchbang 11 Waldorf
+  with two monitors and a Razer BlackWidow Ultimate mechanical keyboard,
+  because mechanical keyboards are *awesome*. I designed and built my desk with
+  programming and brainstorming in mind; as a result, the desktop surface is a
+  whiteboard. I have a Samsung ARM Chromebook that I use when I'm out and about,
+  and a Raspberry Pi for <span style="text-decoration: line-through">fun</span>
+  nothing :( I use
+  [DigitalOcean](https://www.digitalocean.com/?refcode=4cd3d58287ae) as my
+  primary server hosting.  I try to host most of my code and configurations on
+  my [GitHub](https://github.com/scizzorz), although any confidential or
+  private code is located on my own instance of [GitLab](http://gitlab.org/).
 
   I use Openbox as my window manager. I use `urxvt` as my desktop terminal and
   [Secure Shell](https://chrome.google.com/webstore/detail/secure-shell/pnhechapfaindjhompbnflcldabbghjo?hl=en)

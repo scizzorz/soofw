@@ -8,7 +8,7 @@ body: |
 
   ### soofw <span class="sub">&#8210; [link](http://soofw.com/) / [github](http://github.com/scizzorz/soofw)</span>
 
-  This very web site. Written in [Python](http://www.python.org/). Powered by [Flask](http://flask.pocoo.org/). Stored in plain [Markdown](http://daringfireball.net/projects/markdown/) text files. Served by [nginx](http://www.nginx.org/) and [gunicorn](http://gunicorn.org/). Hosted on a [Linode](http://www.linode.com/) running [Ubuntu](http://www.ubuntu.com/).
+  This very web site. Written in [Python](http://www.python.org/). Powered by [Flask](http://flask.pocoo.org/). Stored in plain [Markdown](http://daringfireball.net/projects/markdown/) text files. Served by [nginx](http://www.nginx.org/) and [gunicorn](http://gunicorn.org/). Hosted on [DigitalOcean](http://www.digitalocean.com/) running [Debian](http://www.debian.org/).
 
   I bought some old domain that I thought was totally badass when I was 15, but I decided it wasn't really that cool by the time I was 18. At the same time, I wasn't really a fan of those firstnamelastname.com domains, so I opted out of those. I decided the domain name didn't really matter as long as it was *simple*, so I spent some time searching for two, three, or four letter domains. They don't exist anymore. I moved on to five, and found soofw. It was simple, easily typed, and totally hipster, so I bought it.
 
