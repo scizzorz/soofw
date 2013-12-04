@@ -1,4 +1,7 @@
-import flask, os, yaml
+import flask
+import os
+import yaml
+from collections import defaultdict
 from soofw import app
 
 POSTS_PER_PAGE = 6
@@ -62,17 +65,12 @@ def view_archive(path):
 	articles.sort(key=lambda x: x['datetime'])
 	articles.reverse()
 
-	bundle = {}
-	tags = []
+	bundle = defaultdict(list)
+	tags = set()
 	for article in articles:
 		if 'tags' in article:
 			for tag in article['tags']:
-				if tag not in tags:
-					tags.append(tag)
-
-				if tag not in bundle:
-					bundle[tag] = []
-
+				tags.add(tag)
 				bundle[tag].append(article)
 
 	return flask.render_template('main-archive.html',
