@@ -16,10 +16,10 @@ def grab(path, name):
 	return temp
 
 # view a list of posts
-@app.route('/<blog:path>/')
-@app.route('/<blog:path>/<int:page>/')
-@app.route('/<blog:path>/tag/<tag>/')
-@app.route('/<blog:path>/tag/<tag>/<int:page>/')
+@app.route('/<blog_url:path>/')
+@app.route('/<blog_url:path>/<int:page>/')
+@app.route('/<blog_url:path>/tag/<tag>/')
+@app.route('/<blog_url:path>/tag/<tag>/<int:page>/')
 def view_list(path, tag = None, page = 1):
 	articles = [grab(path, name) for name in os.listdir('soofw/content/' + path)]
 	articles.sort(key=lambda x: x['datetime'])
@@ -55,7 +55,7 @@ def view_list(path, tag = None, page = 1):
 		path = path)
 
 # view a tag-sorted list of post titles
-@app.route('/<blog:path>/archive/')
+@app.route('/<blog_url:path>/archive/')
 def view_archive(path):
 	# open all the articles as previews
 	articles = [grab(path, name) for name in os.listdir('soofw/content/' + path)]
@@ -81,7 +81,7 @@ def view_archive(path):
 		path = path)
 
 # view an RSS feed
-@app.route('/<blog:path>/rss.xml')
+@app.route('/<blog_url:path>/rss.xml')
 def view_rss(path):
 	# open all the articles as full posts
 	articles = [grab(path, name) for name in os.listdir('soofw/content/' + path)]
@@ -102,7 +102,7 @@ def view_rss(path):
 
 # view a single post
 @app.route('/post/<int:name>/', defaults = {'path':'legacy'})
-@app.route('/<blog:path>/<name>/')
+@app.route('/<blog_url:path>/<name>/')
 def view_single(path, name):
 	# open the article
 	article = grab(path, str(name))
@@ -116,7 +116,7 @@ def view_single(path, name):
 
 # view a page
 @app.route('/', defaults = {'name': 'home'})
-@app.route('/<page:name>/')
+@app.route('/<page_url:name>/')
 def view_page(name, path = ''):
 	# open the article
 	article = grab(path, name)

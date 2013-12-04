@@ -52,8 +52,8 @@ def format_date_rss(article):
 
 # only accept certain paths for blog-style areas
 class BlogConverter(routing.BaseConverter):
-	def __init__(self, map):
-		super(BlogConverter, self).__init__(map)
+	def __init__(self, arg):
+		super(BlogConverter, self).__init__(arg)
 		self.regex = r'\w+'
 
 	def to_python(self, value):
@@ -67,8 +67,8 @@ class BlogConverter(routing.BaseConverter):
 
 # only accept certain paths for page-style areas
 class PageConverter(routing.BaseConverter):
-	def __init__(self, map):
-		super(PageConverter, self).__init__(map)
+	def __init__(self, arg):
+		super(PageConverter, self).__init__(arg)
 		self.regex = r'\w+'
 
 	def to_python(self, value):
@@ -80,5 +80,5 @@ class PageConverter(routing.BaseConverter):
 	def to_url(self, value):
 		return value
 
-app.url_map.converters['blog'] = BlogConverter
-app.url_map.converters['page'] = PageConverter
+app.url_map.converters['blog_url'] = BlogConverter
+app.url_map.converters['page_url'] = PageConverter
