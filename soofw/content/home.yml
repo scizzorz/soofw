@@ -3,9 +3,8 @@ page_title: 'home'
 navkey: 'home'
 body: |
   Welcome to the wonderful world of soofw. My name is John (aka scizzorz). I'm
-  20 years old and studying computer science at [Binghamton
-  University](http://binghamton.edu/) in New York. You can email me at
-  <jweachock@gmail.com>.
+  studying computer science at [Binghamton University](http://binghamton.edu/)
+  in New York. You can contact me at <jweachock@gmail.com>.
 
   This site serves as my code playground and experimental zone. I like playing
   around with new stuff, so the site is usually under construction. In the
@@ -30,12 +29,11 @@ body: |
 
   I'm a fan of Android and Linux. I have a Moto X and a Google Nexus 7 (2013),
   both running stock Android 4.4. My desktop is running Crunchbang 11 Waldorf
-  with two monitors and a Razer BlackWidow Ultimate mechanical keyboard,
-  because mechanical keyboards are *awesome*. I designed and built my desk with
+  with two monitors and a Razer BlackWidow Ultimate keyboard, because
+  mechanical keyboards are *awesome*. I designed and built my desk with
   programming and brainstorming in mind; as a result, the desktop surface is a
-  whiteboard. I have a Samsung ARM Chromebook that I use when I'm out and about,
-  and a Raspberry Pi for <span style="text-decoration: line-through">fun</span>
-  nothing :( I use
+  whiteboard. I have an HP Chromebook 11 that I use when I'm out and about, and
+  a small cluster of seven Raspberry Pis that, uhh, do... nothing.  I use
   [DigitalOcean](https://www.digitalocean.com/?refcode=4cd3d58287ae) as my
   primary server hosting.  I try to host most of my code and configurations on
   my [GitHub](https://github.com/scizzorz), although any confidential or
@@ -48,7 +46,7 @@ body: |
   `bash` as my shell and `tmux` to make it more useful. For editing text of any
   sort, I use `vim`. I use Git for version control on all of my projects. I
   prefer to use Python for most of my programming, although I have plenty of
-  experience with PHP, JavaScript, Java. I'm also proficient with SQL, C/C++,
-  Lua, HTML5, and CSS3, and I think Haskell is pretty neat. I've tinkered with
-  Android app development, Arduino, woodworking, etc., but a lot of my free
-  time goes into web programming and scripting neat toys.
+  experience with PHP, JavaScript, and Java. I'm also proficient with SQL,
+  C/C++, Lua, HTML5, and CSS3, and I think Haskell is pretty neat. I've
+  tinkered with Android app development, Arduino, woodworking, etc., but a lot
+  of my free time goes into web programming and scripting neat toys.
