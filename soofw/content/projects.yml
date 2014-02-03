@@ -130,6 +130,20 @@ body: |
 
   ## Widgets
 
+  ### Raspberry Pi cluster
+
+  A small, all-in-one cluster of seven Raspberry Pis.
+  Made with plastic, screws, and Pi.
+
+  I've had a Raspberry Pi for about a year, but it's unfortunately never seen
+  very much use. While attending SC13, I won another five Raspberry Pis. Then I
+  bought a seventh, and put them all in a badass plastic box. It even has an
+  8-port network switch and a 7-port USB hub to enable communication and supply
+  power. Each Pi has its USB, HDMI, power, and ethernet ports exposed, as well
+  as the SD slot.
+
+  Adding six more Pis has not helped to give them a purpose.
+
   ### LCD Clock <span class="sub">&#8210; [github](https://github.com/scizzorz/arduino-remote-lcd)</span>
 
   A physical LCD clock.
